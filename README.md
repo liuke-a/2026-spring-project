@@ -7,7 +7,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-ee4c2c.svg)
-![CUDA](https://img.shields.io/badge/CUDA-12.1-76b900.svg)
+![CUDA](https://img.shields.io/badge/CUDA-13-76b900.svg)
 <!-- ![License](https://img.shields.io/badge/License-MIT-green.svg) -->
 
 ---
@@ -19,13 +19,12 @@
 ---
 
 ## 🛠️ 2. 运行环境与依赖
-本项目推荐在以下标准环境中运行，以确保最佳兼容性与性能：
 
-- **操作系统**: Ubuntu 22.04 LTS (或 Windows 11 WSL2)
-- **编程语言**: Python 3.8+
+- **操作系统**: Ubuntu 24.04 LTS 
+- **编程语言**: Python 3.10+
 - **深度学习框架**: PyTorch 2.x, torchvision 0.15+, torchaudio 2.x
-- **硬件加速**: NVIDIA CUDA 12.1, TensorRT 8.6+ (用于推理加速)
-- **关键依赖库**: `transformers`, `peft`, `langchain`, `ultralytics`, `mmsdk` (根据实际使用精简)
+- **硬件加速**: NVIDIA CUDA 13
+- **关键依赖库**: 
 
 **一键安装依赖**:
 ```bash
