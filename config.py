@@ -29,7 +29,7 @@ IMAGENET_MEAN: Tuple[float, float, float] = (0.485, 0.456, 0.406)
 IMAGENET_STD: Tuple[float, float, float] = (0.229, 0.224, 0.225)
 
 # 训练超参数（针对 RTX 4050 6G 优化）
-BATCH_SIZE: int = 16          # 6G 显存安全值，后续可试探 24
+BATCH_SIZE: int = 32          # 6G 显存安全值，后续可试探 24
 NUM_WORKERS: int = 4            # Ubuntu 笔记本建议 4，CPU 吃紧可改 2
 VAL_RATIO: float = 0.1         # 从 train 目录划分 10% 做验证
 RANDOM_SEED: int = 42
@@ -49,7 +49,7 @@ EARLY_STOP_PATIENCE: int = 5   # 验证集 5 轮不提升则停止
 
 # 优化器
 LR_BACKBONE: float = 1e-4     # 预训练部分学习率
-LR_HEAD: float = 1e-3         # 新加分类头学习率
+LR_HEAD: float = 2e-3         # 新加分类头学习率
 WEIGHT_DECAY: float = 1e-4
 
 # 设备
