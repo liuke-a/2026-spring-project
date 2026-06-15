@@ -9,6 +9,7 @@
 """
 
 import logging
+import random
 from pathlib import Path
 from typing import Tuple, Optional, Callable, List
 
@@ -19,7 +20,7 @@ import torchvision.transforms as T
 
 from config import (
     TRAIN_DIR, IMAGE_SIZE, IMAGENET_MEAN, IMAGENET_STD,
-    BATCH_SIZE, NUM_WORKERS, VAL_RATIO, RANDOM_SEED
+    BATCH_SIZE, NUM_WORKERS, VAL_RATIO, RANDOM_SEED, MAX_SAMPLES
 )
 
 logger = logging.getLogger(__name__)
@@ -43,19 +44,20 @@ class CatDogDataset(Dataset):
         self,
         root_dir: Path,
         transform: Optional[Callable] = None,
-        samples: Optional[List[Tuple[Path, int]]] = None
+        samples: Optional[List[Tuple[Path, int]]] = None,
+        max_samples: Optional[int] = None,
     ) -> None:
         self.root_dir = Path(root_dir)
         self.transform = transform
 
         if samples is None:
             self.samples: List[Tuple[Path, int]] = []
-            self._scan_directory()
+            self._scan_directory(max_samples)
         else:
-            self.samples = samples
+            self.samples = samples[:max_samples] if max_samples is not None else samples
             logger.info(f"Dataset loaded: {len(self.samples)} samples (from split list)")
 
-    def _scan_directory(self) -> None:
+    def _scan_directory(self, max_samples: Optional[int] = None) -> None:
         """扫描目录，解析标签，跳过非图片文件。"""
         if not self.root_dir.exists():
             raise FileNotFoundError(f"Data directory not found: {self.root_dir}")
@@ -63,7 +65,17 @@ class CatDogDataset(Dataset):
         valid_ext = {".jpg", ".jpeg", ".png", ".bmp", ".gif"}
         cat_count = dog_count = 0
 
-        for file_path in self.root_dir.iterdir():
+        # 全量加载时直接遍历，无额外开销；限制样本数时先打乱，保证类别均衡
+        if max_samples is None:
+            file_iter = self.root_dir.iterdir()
+        else:
+            file_iter = list(self.root_dir.iterdir())
+            random.shuffle(file_iter)
+
+        for file_path in file_iter:
+            if max_samples is not None and len(self.samples) >= max_samples:
+                break
+
             if file_path.is_dir() or file_path.suffix.lower() not in valid_ext:
                 continue
 
@@ -140,18 +152,21 @@ def get_transforms() -> Tuple[Callable, Callable]:
     return train_transform, val_transform
 
 
-def get_dataloaders() -> Tuple[DataLoader, DataLoader]:
+def get_dataloaders(max_samples: Optional[int] = None) -> Tuple[DataLoader, DataLoader]:
     """
     构建训练集与验证集的 DataLoader。
 
     从 TRAIN_DIR 加载全部数据，按 VAL_RATIO 随机划分为训练子集与验证子集。
     两个子集分别创建独立的 Dataset 实例，绑定不同的 transform。
 
+    Args:
+        max_samples: 限制加载样本总数，None 表示加载全部。用于快速验证。
+
     Returns:
         (train_loader, val_loader)
     """
     # 先扫描完整数据集
-    full_dataset = CatDogDataset(root_dir=TRAIN_DIR, transform=None)
+    full_dataset = CatDogDataset(root_dir=TRAIN_DIR, transform=None, max_samples=max_samples)
     total = len(full_dataset)
 
     # 计算划分长度
