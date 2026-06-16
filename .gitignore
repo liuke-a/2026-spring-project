@@ -1,0 +1,22 @@
+# Data & large files
+data/
+
+# Logs & generated outputs
+logs/
+checkpoints/
+
+# Python
+__pycache__/
+
+# Model checkpoints & serialized files
+*.pth
+*.pt
+
+# IDE
+.vscode/
+.cursor/
+.trae
+
+# Claude local config
+CLAUDE.local.md
+
