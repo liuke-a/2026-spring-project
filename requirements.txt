@@ -1,0 +1,12 @@
+# pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+torch>=2.0
+torchvision>=0.15
+numpy
+pillow
+tensorboard
+tqdm
+pandas
+scikit-learn
+matplotlib
+seaborn
+pyyaml
