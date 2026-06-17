@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Python
 __pycache__/
 *.pyc
@@ -11,6 +10,8 @@ __pycache__/
 .vscode/
 .idea/
 *.swp
+.cursor/
+.trae
 
 # 数据与模型（大文件，绝对不进 Git）
 data/
@@ -30,27 +31,6 @@ submission.csv
 # 系统文件
 .DS_Store
 Thumbs.db
-=======
-# Data & large files
-data/
-
-# Logs & generated outputs
-logs/
-checkpoints/
-
-# Python
-__pycache__/
-
-# Model checkpoints & serialized files
-*.pth
-*.pt
-
-# IDE
-.vscode/
-.cursor/
-.trae
 
 # Claude local config
 CLAUDE.local.md
-
->>>>>>> 697a3e43c04572b83dbdb96cffc901c02627ca94
