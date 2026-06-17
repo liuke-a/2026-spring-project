@@ -8,7 +8,7 @@ import logging
 import sys
 from pathlib import Path
 
-from config import LOG_FORMAT, LOG_DATE_FORMAT, LOG_DIR, LOG_FILE
+from config_scratch import LOG_FORMAT, LOG_DATE_FORMAT, LOG_DIR, LOG_FILE
 
 
 def setup_logger(name: str = "cat_dog", level: int = logging.INFO) -> logging.Logger:
