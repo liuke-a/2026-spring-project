@@ -34,3 +34,4 @@ Thumbs.db
 
 # Claude local config
 CLAUDE.local.md
+tmp/
