@@ -1,0 +1,11 @@
+# 推理服务配置（与训练 config.py 解耦，独立管理）
+service:
+  model: "seresnet18"         # 可选: seresnet18 | seresnet34
+  device: "auto"              # auto | cuda | cpu
+  max_batch_size: 128         # 批量推理时单次送入模型的最大图像数
+
+models:
+  seresnet18:
+    weights: "weights/SEResNet18_fp16.pth"
+  seresnet34:
+    weights: "weights/SEResNet34_fp16.pth"

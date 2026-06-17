@@ -19,6 +19,8 @@ checkpoints/
 logs/
 report/
 *.pth
+!weights/SEResNet18_fp16.pth
+!weights/SEResNet34_fp16.pth
 *.pt
 *.onnx
 *.trt
