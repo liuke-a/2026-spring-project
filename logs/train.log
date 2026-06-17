@@ -1,0 +1,93 @@
+[2026-06-15 14:14:12] [INFO] [train_scratch] ==================================================
+[2026-06-15 14:14:12] [INFO] [train_scratch] Scratch training (SE-ResNet) started
+[2026-06-15 14:14:12] [INFO] [train_scratch] Device: cuda
+[2026-06-15 14:14:12] [INFO] [train_scratch] Layers=(2, 2, 2, 2), Batch=64, Epochs=80, Warmup=5, BaseLR=0.05
+[2026-06-15 14:14:12] [INFO] [train_scratch] Loading datasets (strong augmentation)...
+[2026-06-15 14:14:16] [INFO] [train_scratch] Building SE-ResNet...
+[2026-06-15 14:14:16] [INFO] [train_scratch] GPU memory before training: GPU=0.1/0.1G
+[2026-06-15 14:14:16] [INFO] [train_scratch] Epoch [1/80]
+[2026-06-15 14:16:45] [INFO] [train_scratch]   Train -> Loss: 0.6811, Acc(approx): 56.18%
+[2026-06-15 14:17:07] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.7025, Acc: 49.68%
+[2026-06-15 14:17:08] [INFO] [train_scratch]   *** New best accuracy: 49.68% ***
+[2026-06-15 14:17:08] [INFO] [train_scratch] Epoch [2/80]
+[2026-06-15 14:19:12] [INFO] [train_scratch]   Train -> Loss: 0.6833, Acc(approx): 57.29%
+[2026-06-15 14:19:30] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6966, Acc: 49.44%
+[2026-06-15 14:19:30] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-15 14:19:30] [INFO] [train_scratch] Epoch [3/80]
+[2026-06-15 14:21:34] [INFO] [train_scratch]   Train -> Loss: 0.6892, Acc(approx): 56.87%
+[2026-06-15 14:21:51] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6977, Acc: 49.80%
+[2026-06-15 14:21:51] [INFO] [train_scratch]   *** New best accuracy: 49.80% ***
+[2026-06-15 14:21:51] [INFO] [train_scratch] Epoch [4/80]
+[2026-06-15 14:23:55] [INFO] [train_scratch]   Train -> Loss: 0.6848, Acc(approx): 57.08%
+[2026-06-15 14:24:13] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6938, Acc: 51.96%
+[2026-06-15 14:24:14] [INFO] [train_scratch]   *** New best accuracy: 51.96% ***
+[2026-06-15 14:24:14] [INFO] [train_scratch] Epoch [5/80]
+[2026-06-15 14:26:20] [INFO] [train_scratch]   Train -> Loss: 0.6793, Acc(approx): 58.77%
+[2026-06-15 14:26:37] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6922, Acc: 50.88%
+[2026-06-15 14:26:38] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-15 14:26:38] [INFO] [train_scratch] Epoch [6/80]
+[2026-06-15 14:28:45] [INFO] [train_scratch]   Train -> Loss: 0.6597, Acc(approx): 60.69%
+[2026-06-15 14:29:02] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6915, Acc: 53.56%
+[2026-06-15 14:29:02] [INFO] [train_scratch]   *** New best accuracy: 53.56% ***
+[2026-06-15 14:29:02] [INFO] [train_scratch] Epoch [7/80]
+[2026-06-15 14:31:21] [INFO] [train_scratch]   Train -> Loss: 0.6375, Acc(approx): 63.07%
+[2026-06-15 14:31:38] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6945, Acc: 51.24%
+[2026-06-15 14:31:39] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-15 14:31:39] [INFO] [train_scratch] Epoch [8/80]
+[2026-06-15 14:34:27] [INFO] [train_scratch]   Train -> Loss: 0.6211, Acc(approx): 65.89%
+[2026-06-15 14:34:54] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6832, Acc: 54.44%
+[2026-06-15 14:34:55] [INFO] [train_scratch]   *** New best accuracy: 54.44% ***
+[2026-06-15 14:34:55] [INFO] [train_scratch] Epoch [9/80]
+[2026-06-15 14:37:35] [INFO] [train_scratch]   Train -> Loss: 0.5999, Acc(approx): 68.31%
+[2026-06-15 14:37:53] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6885, Acc: 50.76%
+[2026-06-15 14:37:54] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-15 14:37:54] [INFO] [train_scratch] Epoch [10/80]
+[2026-06-15 14:41:40] [INFO] [train_scratch] ==================================================
+[2026-06-15 14:41:40] [INFO] [train_scratch] Scratch training (SE-ResNet) started
+[2026-06-15 14:41:40] [INFO] [train_scratch] Device: cuda
+[2026-06-15 14:41:40] [INFO] [train_scratch] Layers=(2, 2, 2, 2), Batch=64, Epochs=80, Warmup=5, BaseLR=0.05
+[2026-06-15 14:41:40] [INFO] [train_scratch] Loading datasets (strong augmentation)...
+[2026-06-15 14:41:43] [INFO] [train_scratch] Building SE-ResNet...
+[2026-06-15 14:41:44] [INFO] [train_scratch] GPU memory before training: GPU=0.1/0.1G
+[2026-06-15 14:41:44] [INFO] [train_scratch] Epoch [1/80]
+[2026-06-15 14:45:26] [INFO] [train_scratch]   Train -> Loss: 0.6729, Acc(approx): 58.01%
+[2026-06-15 14:46:11] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6995, Acc: 49.64%
+[2026-06-15 14:46:12] [INFO] [train_scratch]   *** New best accuracy: 49.64% ***
+[2026-06-15 14:46:12] [INFO] [train_scratch] Epoch [2/80]
+[2026-06-15 14:49:07] [INFO] [train_scratch]   Train -> Loss: 0.6692, Acc(approx): 60.06%
+[2026-06-15 14:49:25] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6948, Acc: 50.36%
+[2026-06-15 14:49:26] [INFO] [train_scratch]   *** New best accuracy: 50.36% ***
+[2026-06-15 14:49:26] [INFO] [train_scratch] Epoch [3/80]
+[2026-06-15 14:52:15] [INFO] [train_scratch]   Train -> Loss: 0.6715, Acc(approx): 60.92%
+[2026-06-15 14:52:40] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6951, Acc: 49.08%
+[2026-06-15 14:52:40] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-15 14:52:40] [INFO] [train_scratch] Epoch [4/80]
+[2026-06-15 14:55:20] [INFO] [train_scratch]   Train -> Loss: 0.6567, Acc(approx): 63.11%
+[2026-06-15 14:55:37] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6946, Acc: 49.76%
+[2026-06-15 14:55:37] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-15 14:55:37] [INFO] [train_scratch] Epoch [5/80]
+[2026-06-15 14:57:42] [INFO] [train_scratch]   Train -> Loss: 0.6393, Acc(approx): 65.90%
+[2026-06-15 14:57:59] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6971, Acc: 50.52%
+[2026-06-15 14:58:00] [INFO] [train_scratch]   *** New best accuracy: 50.52% ***
+[2026-06-15 14:58:00] [INFO] [train_scratch] Epoch [6/80]
+[2026-06-15 16:56:43] [INFO] [train_scratch] ==================================================
+[2026-06-15 16:56:43] [INFO] [train_scratch] Scratch training (SE-ResNet) started
+[2026-06-15 16:56:43] [INFO] [train_scratch] Device: cuda
+[2026-06-15 16:56:43] [INFO] [train_scratch] Layers=(2, 2, 2, 2), Batch=256, Epochs=90, Warmup=3, BaseLR=0.2
+[2026-06-15 16:56:43] [INFO] [train_scratch] Loading datasets (strong augmentation, persistent workers)...
+[2026-06-15 16:56:53] [INFO] [train_scratch] Building SE-ResNet...
+[2026-06-15 16:56:55] [WARNING] [train_scratch] torch.compile failed, falling back to eager: duplicate template name
+[2026-06-15 16:56:55] [INFO] [train_scratch] GPU memory before training: GPU=0.1/0.1G
+[2026-06-15 16:56:55] [INFO] [train_scratch] Epoch [1/90]
+[2026-06-15 16:59:53] [INFO] [train_scratch]   Train -> Loss: 0.7655, Acc(approx): 53.45%
+[2026-06-15 17:00:35] [INFO] [train_scratch]   Val(raw) -> Loss: 0.7219, Acc: 56.12%
+[2026-06-15 17:00:35] [INFO] [train_scratch]   Val(raw) PredDist -> cat=500, dog=2000
+[2026-06-15 17:00:39] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6918, Acc: 51.76%
+[2026-06-15 17:00:39] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=301, dog=2199
+[2026-06-15 17:00:39] [INFO] [train_scratch]   *** New best accuracy: 51.76% ***
+[2026-06-15 17:00:39] [INFO] [train_scratch] Epoch [2/90]
+[2026-06-16 08:44:58] [INFO] [train_scratch] ==================================================
+[2026-06-16 08:44:58] [INFO] [train_scratch] Scratch training (SE-ResNet) started
+[2026-06-16 08:44:58] [INFO] [train_scratch] Device: cuda
+[2026-06-16 08:44:58] [INFO] [train_scratch] Layers=(2, 2, 2, 2), Batch=256, Epochs=90, Warmup=3, BaseLR=0.2
+[2026-06-16 08:44:58] [INFO] [train_scratch] Loading datasets (strong augmentation, persistent workers)...
