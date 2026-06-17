@@ -70,24 +70,1360 @@
 [2026-06-15 14:57:59] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6971, Acc: 50.52%
 [2026-06-15 14:58:00] [INFO] [train_scratch]   *** New best accuracy: 50.52% ***
 [2026-06-15 14:58:00] [INFO] [train_scratch] Epoch [6/80]
-[2026-06-15 16:56:43] [INFO] [train_scratch] ==================================================
-[2026-06-15 16:56:43] [INFO] [train_scratch] Scratch training (SE-ResNet) started
-[2026-06-15 16:56:43] [INFO] [train_scratch] Device: cuda
-[2026-06-15 16:56:43] [INFO] [train_scratch] Layers=(2, 2, 2, 2), Batch=256, Epochs=90, Warmup=3, BaseLR=0.2
-[2026-06-15 16:56:43] [INFO] [train_scratch] Loading datasets (strong augmentation, persistent workers)...
-[2026-06-15 16:56:53] [INFO] [train_scratch] Building SE-ResNet...
-[2026-06-15 16:56:55] [WARNING] [train_scratch] torch.compile failed, falling back to eager: duplicate template name
-[2026-06-15 16:56:55] [INFO] [train_scratch] GPU memory before training: GPU=0.1/0.1G
-[2026-06-15 16:56:55] [INFO] [train_scratch] Epoch [1/90]
-[2026-06-15 16:59:53] [INFO] [train_scratch]   Train -> Loss: 0.7655, Acc(approx): 53.45%
-[2026-06-15 17:00:35] [INFO] [train_scratch]   Val(raw) -> Loss: 0.7219, Acc: 56.12%
-[2026-06-15 17:00:35] [INFO] [train_scratch]   Val(raw) PredDist -> cat=500, dog=2000
-[2026-06-15 17:00:39] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6918, Acc: 51.76%
-[2026-06-15 17:00:39] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=301, dog=2199
-[2026-06-15 17:00:39] [INFO] [train_scratch]   *** New best accuracy: 51.76% ***
-[2026-06-15 17:00:39] [INFO] [train_scratch] Epoch [2/90]
-[2026-06-16 08:44:58] [INFO] [train_scratch] ==================================================
-[2026-06-16 08:44:58] [INFO] [train_scratch] Scratch training (SE-ResNet) started
-[2026-06-16 08:44:58] [INFO] [train_scratch] Device: cuda
-[2026-06-16 08:44:58] [INFO] [train_scratch] Layers=(2, 2, 2, 2), Batch=256, Epochs=90, Warmup=3, BaseLR=0.2
-[2026-06-16 08:44:58] [INFO] [train_scratch] Loading datasets (strong augmentation, persistent workers)...
+[2026-06-15 15:53:37] [INFO] [train_scratch] ==================================================
+[2026-06-15 15:53:37] [INFO] [train_scratch] Scratch training (SE-ResNet) started
+[2026-06-15 15:53:37] [INFO] [train_scratch] Device: cuda
+[2026-06-15 15:53:37] [INFO] [train_scratch] Layers=(2, 2, 2, 2), Batch=64, Epochs=80, Warmup=5, BaseLR=0.05
+[2026-06-15 15:53:37] [INFO] [train_scratch] Loading datasets (strong augmentation)...
+[2026-06-15 15:53:40] [INFO] [train_scratch] Building SE-ResNet...
+[2026-06-15 15:53:41] [INFO] [train_scratch] GPU memory before training: GPU=0.1/0.1G
+[2026-06-15 15:53:41] [INFO] [train_scratch] Epoch [1/80]
+[2026-06-15 15:54:24] [INFO] [train_scratch]   Train -> Loss: 0.6751, Acc(approx): 57.49%
+[2026-06-15 15:54:28] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6995, Acc: 49.92%
+[2026-06-15 15:54:29] [INFO] [train_scratch]   *** New best accuracy: 49.92% ***
+[2026-06-15 15:54:29] [INFO] [train_scratch] Epoch [2/80]
+[2026-06-15 15:55:11] [INFO] [train_scratch]   Train -> Loss: 0.6702, Acc(approx): 59.94%
+[2026-06-15 15:55:14] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6983, Acc: 50.24%
+[2026-06-15 15:55:16] [INFO] [train_scratch]   *** New best accuracy: 50.24% ***
+[2026-06-15 15:55:16] [INFO] [train_scratch] Epoch [3/80]
+[2026-06-15 15:55:57] [INFO] [train_scratch]   Train -> Loss: 0.6723, Acc(approx): 60.25%
+[2026-06-15 15:56:00] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6962, Acc: 51.52%
+[2026-06-15 15:56:02] [INFO] [train_scratch]   *** New best accuracy: 51.52% ***
+[2026-06-15 15:56:02] [INFO] [train_scratch] Epoch [4/80]
+[2026-06-16 08:42:20] [INFO] [train_scratch] ==================================================
+[2026-06-16 08:42:20] [INFO] [train_scratch] Scratch training (SE-ResNet) started
+[2026-06-16 08:42:20] [INFO] [train_scratch] Device: cuda
+[2026-06-16 08:42:20] [INFO] [train_scratch] Layers=(2, 2, 2, 2), Batch=256, Epochs=90, Warmup=3, BaseLR=0.2
+[2026-06-16 08:42:20] [INFO] [train_scratch] Loading datasets (strong augmentation, persistent workers)...
+[2026-06-16 08:46:20] [INFO] [train_scratch] ==================================================
+[2026-06-16 08:46:20] [INFO] [train_scratch] Scratch training (SE-ResNet) started
+[2026-06-16 08:46:20] [INFO] [train_scratch] Device: cuda
+[2026-06-16 08:46:20] [INFO] [train_scratch] Layers=(2, 2, 2, 2), Batch=256, Epochs=90, Warmup=3, BaseLR=0.2
+[2026-06-16 08:46:20] [INFO] [train_scratch] Loading datasets (strong augmentation, persistent workers)...
+[2026-06-16 08:46:23] [INFO] [train_scratch] Building SE-ResNet...
+[2026-06-16 08:46:26] [INFO] [train_scratch] torch.compile enabled (mode=default)
+[2026-06-16 08:46:26] [INFO] [train_scratch] GPU memory before training: GPU=0.1/0.1G
+[2026-06-16 08:46:26] [INFO] [train_scratch] Epoch [1/90]
+[2026-06-16 08:47:38] [INFO] [train_scratch]   Train -> Loss: 0.7624, Acc(approx): 53.56%
+[2026-06-16 08:47:42] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6796, Acc: 58.00%
+[2026-06-16 08:47:42] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1183, dog=1317
+[2026-06-16 08:47:44] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6941, Acc: 49.64%
+[2026-06-16 08:47:44] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=0, dog=2500
+[2026-06-16 08:47:46] [INFO] [train_scratch]   *** New best accuracy: 49.64% ***
+[2026-06-16 08:47:46] [INFO] [train_scratch] Epoch [2/90]
+[2026-06-16 08:48:07] [INFO] [train_scratch]   Train -> Loss: 0.7306, Acc(approx): 55.24%
+[2026-06-16 08:48:09] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6654, Acc: 55.96%
+[2026-06-16 08:48:09] [INFO] [train_scratch]   Val(raw) PredDist -> cat=460, dog=2040
+[2026-06-16 08:48:12] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6939, Acc: 49.64%
+[2026-06-16 08:48:12] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=0, dog=2500
+[2026-06-16 08:48:12] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 08:48:12] [INFO] [train_scratch] Epoch [3/90]
+[2026-06-16 08:48:33] [INFO] [train_scratch]   Train -> Loss: 0.6938, Acc(approx): 57.23%
+[2026-06-16 08:48:35] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6398, Acc: 62.28%
+[2026-06-16 08:48:35] [INFO] [train_scratch]   Val(raw) PredDist -> cat=866, dog=1634
+[2026-06-16 08:48:38] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6934, Acc: 51.40%
+[2026-06-16 08:48:38] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=526, dog=1974
+[2026-06-16 08:48:39] [INFO] [train_scratch]   *** New best accuracy: 51.40% ***
+[2026-06-16 08:48:39] [INFO] [train_scratch] Epoch [4/90]
+[2026-06-16 08:49:00] [INFO] [train_scratch]   Train -> Loss: 0.6689, Acc(approx): 59.91%
+[2026-06-16 08:49:02] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6459, Acc: 57.28%
+[2026-06-16 08:49:02] [INFO] [train_scratch]   Val(raw) PredDist -> cat=411, dog=2089
+[2026-06-16 08:49:05] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6944, Acc: 49.64%
+[2026-06-16 08:49:05] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=0, dog=2500
+[2026-06-16 08:49:05] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 08:49:05] [INFO] [train_scratch] Epoch [5/90]
+[2026-06-16 08:49:27] [INFO] [train_scratch]   Train -> Loss: 0.6566, Acc(approx): 61.23%
+[2026-06-16 08:49:29] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6193, Acc: 64.28%
+[2026-06-16 08:49:29] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1960, dog=540
+[2026-06-16 08:49:32] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6977, Acc: 49.64%
+[2026-06-16 08:49:32] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=0, dog=2500
+[2026-06-16 08:49:32] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 08:49:32] [INFO] [train_scratch] Epoch [6/90]
+[2026-06-16 08:49:54] [INFO] [train_scratch]   Train -> Loss: 0.6440, Acc(approx): 62.92%
+[2026-06-16 08:49:56] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5491, Acc: 73.00%
+[2026-06-16 08:49:56] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1148, dog=1352
+[2026-06-16 08:49:59] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6981, Acc: 49.64%
+[2026-06-16 08:49:59] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=0, dog=2500
+[2026-06-16 08:49:59] [INFO] [train_scratch]   EarlyStop patience: 3/15
+[2026-06-16 08:49:59] [INFO] [train_scratch] Epoch [7/90]
+[2026-06-16 08:50:21] [INFO] [train_scratch]   Train -> Loss: 0.6178, Acc(approx): 66.21%
+[2026-06-16 08:50:23] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5895, Acc: 66.24%
+[2026-06-16 08:50:23] [INFO] [train_scratch]   Val(raw) PredDist -> cat=807, dog=1693
+[2026-06-16 08:50:26] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6960, Acc: 49.84%
+[2026-06-16 08:50:26] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=411, dog=2089
+[2026-06-16 08:50:26] [INFO] [train_scratch]   EarlyStop patience: 4/15
+[2026-06-16 08:50:26] [INFO] [train_scratch] Epoch [8/90]
+[2026-06-16 08:50:47] [INFO] [train_scratch]   Train -> Loss: 0.6047, Acc(approx): 68.23%
+[2026-06-16 08:50:49] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5060, Acc: 75.48%
+[2026-06-16 08:50:49] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1610, dog=890
+[2026-06-16 08:50:51] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.7029, Acc: 49.48%
+[2026-06-16 08:50:51] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=154, dog=2346
+[2026-06-16 08:50:52] [INFO] [train_scratch]   EarlyStop patience: 5/15
+[2026-06-16 08:50:52] [INFO] [train_scratch] Epoch [9/90]
+[2026-06-16 08:51:13] [INFO] [train_scratch]   Train -> Loss: 0.5866, Acc(approx): 68.77%
+[2026-06-16 08:51:15] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4600, Acc: 78.88%
+[2026-06-16 08:51:15] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1581, dog=919
+[2026-06-16 08:51:17] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.7420, Acc: 49.72%
+[2026-06-16 08:51:17] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2, dog=2498
+[2026-06-16 08:51:18] [INFO] [train_scratch]   EarlyStop patience: 6/15
+[2026-06-16 08:51:18] [INFO] [train_scratch] Epoch [10/90]
+[2026-06-16 08:51:39] [INFO] [train_scratch]   Train -> Loss: 0.5660, Acc(approx): 72.81%
+[2026-06-16 08:51:41] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4748, Acc: 76.52%
+[2026-06-16 08:51:41] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1344, dog=1156
+[2026-06-16 08:51:43] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.8479, Acc: 49.64%
+[2026-06-16 08:51:43] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=0, dog=2500
+[2026-06-16 08:51:44] [INFO] [train_scratch]   EarlyStop patience: 7/15
+[2026-06-16 08:51:44] [INFO] [train_scratch] Epoch [11/90]
+[2026-06-16 08:52:04] [INFO] [train_scratch]   Train -> Loss: 0.5557, Acc(approx): 73.35%
+[2026-06-16 08:52:07] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4940, Acc: 74.60%
+[2026-06-16 08:52:07] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1828, dog=672
+[2026-06-16 08:52:09] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.7684, Acc: 49.76%
+[2026-06-16 08:52:09] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=7, dog=2493
+[2026-06-16 08:52:09] [INFO] [train_scratch]   EarlyStop patience: 8/15
+[2026-06-16 08:52:09] [INFO] [train_scratch] Epoch [12/90]
+[2026-06-16 08:52:30] [INFO] [train_scratch]   Train -> Loss: 0.5370, Acc(approx): 72.38%
+[2026-06-16 08:52:32] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5910, Acc: 72.52%
+[2026-06-16 08:52:32] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1924, dog=576
+[2026-06-16 08:52:34] [INFO] [train_scratch]   Val(EMA) -> Loss: 1.5728, Acc: 49.64%
+[2026-06-16 08:52:34] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=0, dog=2500
+[2026-06-16 08:52:35] [INFO] [train_scratch]   EarlyStop patience: 9/15
+[2026-06-16 08:52:35] [INFO] [train_scratch] Epoch [13/90]
+[2026-06-16 08:52:56] [INFO] [train_scratch]   Train -> Loss: 0.5138, Acc(approx): 72.12%
+[2026-06-16 08:52:59] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5011, Acc: 73.92%
+[2026-06-16 08:52:59] [INFO] [train_scratch]   Val(raw) PredDist -> cat=655, dog=1845
+[2026-06-16 08:53:01] [INFO] [train_scratch]   Val(EMA) -> Loss: 3.2145, Acc: 49.64%
+[2026-06-16 08:53:01] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=0, dog=2500
+[2026-06-16 08:53:02] [INFO] [train_scratch]   EarlyStop patience: 10/15
+[2026-06-16 08:53:02] [INFO] [train_scratch] Epoch [14/90]
+[2026-06-16 08:53:23] [INFO] [train_scratch]   Train -> Loss: 0.5032, Acc(approx): 77.61%
+[2026-06-16 08:53:25] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4545, Acc: 76.68%
+[2026-06-16 08:53:25] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1826, dog=674
+[2026-06-16 08:53:28] [INFO] [train_scratch]   Val(EMA) -> Loss: 7.5104, Acc: 49.64%
+[2026-06-16 08:53:28] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=0, dog=2500
+[2026-06-16 08:53:28] [INFO] [train_scratch]   EarlyStop patience: 11/15
+[2026-06-16 08:53:28] [INFO] [train_scratch] Epoch [15/90]
+[2026-06-16 08:53:49] [INFO] [train_scratch]   Train -> Loss: 0.4855, Acc(approx): 76.14%
+[2026-06-16 08:53:52] [INFO] [train_scratch]   Val(raw) -> Loss: 0.3873, Acc: 83.36%
+[2026-06-16 08:53:52] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1639, dog=861
+[2026-06-16 08:53:54] [INFO] [train_scratch]   Val(EMA) -> Loss: 11.2334, Acc: 49.64%
+[2026-06-16 08:53:54] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=0, dog=2500
+[2026-06-16 08:53:54] [INFO] [train_scratch]   EarlyStop patience: 12/15
+[2026-06-16 08:53:54] [INFO] [train_scratch] Epoch [16/90]
+[2026-06-16 08:54:15] [INFO] [train_scratch]   Train -> Loss: 0.4753, Acc(approx): 78.18%
+[2026-06-16 08:54:17] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2362, Acc: 92.08%
+[2026-06-16 08:54:17] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1273, dog=1227
+[2026-06-16 08:54:20] [INFO] [train_scratch]   Val(EMA) -> Loss: 22.7726, Acc: 49.64%
+[2026-06-16 08:54:20] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=0, dog=2500
+[2026-06-16 08:54:20] [INFO] [train_scratch]   EarlyStop patience: 13/15
+[2026-06-16 08:54:20] [INFO] [train_scratch] Epoch [17/90]
+[2026-06-16 08:54:41] [INFO] [train_scratch]   Train -> Loss: 0.4641, Acc(approx): 82.12%
+[2026-06-16 08:54:43] [INFO] [train_scratch]   Val(raw) -> Loss: 0.3059, Acc: 88.00%
+[2026-06-16 08:54:43] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1519, dog=981
+[2026-06-16 08:54:46] [INFO] [train_scratch]   Val(EMA) -> Loss: 36.3736, Acc: 49.64%
+[2026-06-16 08:54:46] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=0, dog=2500
+[2026-06-16 08:54:46] [INFO] [train_scratch]   EarlyStop patience: 14/15
+[2026-06-16 08:54:46] [INFO] [train_scratch] Epoch [18/90]
+[2026-06-16 08:55:07] [INFO] [train_scratch]   Train -> Loss: 0.4413, Acc(approx): 80.96%
+[2026-06-16 08:55:10] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2339, Acc: 92.44%
+[2026-06-16 08:55:10] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1214, dog=1286
+[2026-06-16 08:55:12] [INFO] [train_scratch]   Val(EMA) -> Loss: 67.3105, Acc: 49.64%
+[2026-06-16 08:55:12] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=0, dog=2500
+[2026-06-16 08:55:12] [INFO] [train_scratch]   EarlyStop patience: 15/15
+[2026-06-16 08:55:12] [INFO] [train_scratch] Early stopping triggered at epoch 18
+[2026-06-16 08:55:12] [INFO] [train_scratch] Scratch training finished. Best validation accuracy: 51.40%
+[2026-06-16 08:55:12] [INFO] [train_scratch] ==================================================
+[2026-06-16 08:57:36] [INFO] [train_scratch] ==================================================
+[2026-06-16 08:57:36] [INFO] [train_scratch] Scratch training (SE-ResNet) started
+[2026-06-16 08:57:36] [INFO] [train_scratch] Device: cuda
+[2026-06-16 08:57:36] [INFO] [train_scratch] Layers=(2, 2, 2, 2), Batch=256, Epochs=90, Warmup=3, BaseLR=0.2
+[2026-06-16 08:57:36] [INFO] [train_scratch] Loading datasets (strong augmentation, persistent workers)...
+[2026-06-16 08:57:40] [INFO] [train_scratch] Building SE-ResNet...
+[2026-06-16 08:57:41] [INFO] [train_scratch] torch.compile enabled (mode=default)
+[2026-06-16 08:57:41] [INFO] [train_scratch] GPU memory before training: GPU=0.1/0.1G
+[2026-06-16 08:57:41] [INFO] [train_scratch] Epoch [1/90]
+[2026-06-16 08:58:35] [INFO] [train_scratch]   Train -> Loss: 0.7714, Acc(approx): 53.61%
+[2026-06-16 08:58:38] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6721, Acc: 56.24%
+[2026-06-16 08:58:38] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1071, dog=1429
+[2026-06-16 08:58:40] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6934, Acc: 49.64%
+[2026-06-16 08:58:40] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=0, dog=2500
+[2026-06-16 08:58:42] [INFO] [train_scratch]   *** New best raw accuracy: 56.24% ***
+[2026-06-16 08:58:42] [INFO] [train_scratch] Epoch [2/90]
+[2026-06-16 08:59:03] [INFO] [train_scratch]   Train -> Loss: 0.7379, Acc(approx): 55.46%
+[2026-06-16 08:59:05] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6624, Acc: 56.24%
+[2026-06-16 08:59:05] [INFO] [train_scratch]   Val(raw) PredDist -> cat=413, dog=2087
+[2026-06-16 08:59:08] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6928, Acc: 52.68%
+[2026-06-16 08:59:08] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=514, dog=1986
+[2026-06-16 08:59:09] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 08:59:09] [INFO] [train_scratch] Epoch [3/90]
+[2026-06-16 08:59:29] [INFO] [train_scratch]   Train -> Loss: 0.6945, Acc(approx): 56.91%
+[2026-06-16 08:59:32] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6390, Acc: 62.56%
+[2026-06-16 08:59:32] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1041, dog=1459
+[2026-06-16 08:59:35] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6923, Acc: 52.88%
+[2026-06-16 08:59:35] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2085, dog=415
+[2026-06-16 08:59:36] [INFO] [train_scratch]   *** New best raw accuracy: 62.56% ***
+[2026-06-16 08:59:36] [INFO] [train_scratch] Epoch [4/90]
+[2026-06-16 08:59:57] [INFO] [train_scratch]   Train -> Loss: 0.6685, Acc(approx): 59.99%
+[2026-06-16 09:00:00] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6292, Acc: 61.92%
+[2026-06-16 09:00:00] [INFO] [train_scratch]   Val(raw) PredDist -> cat=701, dog=1799
+[2026-06-16 09:00:03] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6915, Acc: 51.56%
+[2026-06-16 09:00:03] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2388, dog=112
+[2026-06-16 09:00:03] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 09:00:03] [INFO] [train_scratch] Epoch [5/90]
+[2026-06-16 09:00:24] [INFO] [train_scratch]   Train -> Loss: 0.6532, Acc(approx): 62.01%
+[2026-06-16 09:00:27] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6380, Acc: 61.56%
+[2026-06-16 09:00:27] [INFO] [train_scratch]   Val(raw) PredDist -> cat=878, dog=1622
+[2026-06-16 09:00:30] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6906, Acc: 51.00%
+[2026-06-16 09:00:30] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2468, dog=32
+[2026-06-16 09:00:30] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 09:00:30] [INFO] [train_scratch] Epoch [6/90]
+[2026-06-16 09:00:51] [INFO] [train_scratch]   Train -> Loss: 0.6358, Acc(approx): 63.85%
+[2026-06-16 09:00:53] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5747, Acc: 69.60%
+[2026-06-16 09:00:53] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1215, dog=1285
+[2026-06-16 09:00:56] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6898, Acc: 50.88%
+[2026-06-16 09:00:56] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2487, dog=13
+[2026-06-16 09:00:57] [INFO] [train_scratch]   *** New best raw accuracy: 69.60% ***
+[2026-06-16 09:00:57] [INFO] [train_scratch] Epoch [7/90]
+[2026-06-16 09:01:18] [INFO] [train_scratch]   Train -> Loss: 0.6060, Acc(approx): 67.85%
+[2026-06-16 09:01:20] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5357, Acc: 72.44%
+[2026-06-16 09:01:20] [INFO] [train_scratch]   Val(raw) PredDist -> cat=916, dog=1584
+[2026-06-16 09:01:23] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6894, Acc: 50.88%
+[2026-06-16 09:01:23] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2487, dog=13
+[2026-06-16 09:01:24] [INFO] [train_scratch]   *** New best raw accuracy: 72.44% ***
+[2026-06-16 09:01:24] [INFO] [train_scratch] Epoch [8/90]
+[2026-06-16 09:01:45] [INFO] [train_scratch]   Train -> Loss: 0.5935, Acc(approx): 69.21%
+[2026-06-16 09:01:47] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5021, Acc: 75.16%
+[2026-06-16 09:01:47] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1738, dog=762
+[2026-06-16 09:01:50] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6895, Acc: 50.88%
+[2026-06-16 09:01:50] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2487, dog=13
+[2026-06-16 09:01:51] [INFO] [train_scratch]   *** New best raw accuracy: 75.16% ***
+[2026-06-16 09:01:51] [INFO] [train_scratch] Epoch [9/90]
+[2026-06-16 09:02:12] [INFO] [train_scratch]   Train -> Loss: 0.5762, Acc(approx): 69.60%
+[2026-06-16 09:02:15] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4616, Acc: 78.60%
+[2026-06-16 09:02:15] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1634, dog=866
+[2026-06-16 09:02:17] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6901, Acc: 50.84%
+[2026-06-16 09:02:17] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2488, dog=12
+[2026-06-16 09:02:19] [INFO] [train_scratch]   *** New best raw accuracy: 78.60% ***
+[2026-06-16 09:02:19] [INFO] [train_scratch] Epoch [10/90]
+[2026-06-16 09:02:40] [INFO] [train_scratch]   Train -> Loss: 0.5548, Acc(approx): 73.48%
+[2026-06-16 09:02:43] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4001, Acc: 82.16%
+[2026-06-16 09:02:43] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1331, dog=1169
+[2026-06-16 09:02:45] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6909, Acc: 50.96%
+[2026-06-16 09:02:45] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2485, dog=15
+[2026-06-16 09:02:46] [INFO] [train_scratch]   *** New best raw accuracy: 82.16% ***
+[2026-06-16 09:02:46] [INFO] [train_scratch] Epoch [11/90]
+[2026-06-16 09:03:07] [INFO] [train_scratch]   Train -> Loss: 0.5457, Acc(approx): 73.94%
+[2026-06-16 09:03:10] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5250, Acc: 71.84%
+[2026-06-16 09:03:10] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1943, dog=557
+[2026-06-16 09:03:13] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6920, Acc: 50.92%
+[2026-06-16 09:03:13] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2484, dog=16
+[2026-06-16 09:03:13] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 09:03:13] [INFO] [train_scratch] Epoch [12/90]
+[2026-06-16 09:03:34] [INFO] [train_scratch]   Train -> Loss: 0.5311, Acc(approx): 72.58%
+[2026-06-16 09:03:36] [INFO] [train_scratch]   Val(raw) -> Loss: 0.3650, Acc: 84.40%
+[2026-06-16 09:03:36] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1309, dog=1191
+[2026-06-16 09:03:39] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6922, Acc: 51.08%
+[2026-06-16 09:03:39] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2480, dog=20
+[2026-06-16 09:03:40] [INFO] [train_scratch]   *** New best raw accuracy: 84.40% ***
+[2026-06-16 09:03:40] [INFO] [train_scratch] Epoch [13/90]
+[2026-06-16 09:04:02] [INFO] [train_scratch]   Train -> Loss: 0.5112, Acc(approx): 72.32%
+[2026-06-16 09:04:04] [INFO] [train_scratch]   Val(raw) -> Loss: 0.3822, Acc: 82.48%
+[2026-06-16 09:04:04] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1629, dog=871
+[2026-06-16 09:04:07] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6926, Acc: 51.08%
+[2026-06-16 09:04:07] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2480, dog=20
+[2026-06-16 09:04:07] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 09:04:07] [INFO] [train_scratch] Epoch [14/90]
+[2026-06-16 09:04:29] [INFO] [train_scratch]   Train -> Loss: 0.5008, Acc(approx): 77.58%
+[2026-06-16 09:04:31] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4709, Acc: 75.72%
+[2026-06-16 09:04:31] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1856, dog=644
+[2026-06-16 09:04:34] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6929, Acc: 51.04%
+[2026-06-16 09:04:34] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2483, dog=17
+[2026-06-16 09:04:34] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 09:04:34] [INFO] [train_scratch] Epoch [15/90]
+[2026-06-16 09:05:35] [INFO] [train_scratch] ==================================================
+[2026-06-16 09:05:35] [INFO] [train_scratch] Scratch training (SE-ResNet) started
+[2026-06-16 09:05:35] [INFO] [train_scratch] Device: cuda
+[2026-06-16 09:05:35] [INFO] [train_scratch] Layers=(2, 2, 2, 2), Batch=256, Epochs=90, Warmup=3, BaseLR=0.2
+[2026-06-16 09:05:35] [INFO] [train_scratch] Loading datasets (strong augmentation, persistent workers)...
+[2026-06-16 09:05:38] [INFO] [train_scratch] Building SE-ResNet...
+[2026-06-16 09:05:40] [INFO] [train_scratch] torch.compile enabled (mode=default)
+[2026-06-16 09:05:40] [INFO] [train_scratch] GPU memory before training: GPU=0.1/0.1G
+[2026-06-16 09:05:40] [INFO] [train_scratch] Epoch [1/90]
+[2026-06-16 09:06:32] [INFO] [train_scratch]   Train -> Loss: 0.7616, Acc(approx): 53.54%
+[2026-06-16 09:06:35] [INFO] [train_scratch]   Val(raw) -> Loss: 0.7803, Acc: 49.76%
+[2026-06-16 09:06:35] [INFO] [train_scratch]   Val(raw) PredDist -> cat=13, dog=2487
+[2026-06-16 09:06:38] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6903, Acc: 50.48%
+[2026-06-16 09:06:38] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2495, dog=5
+[2026-06-16 09:06:39] [INFO] [train_scratch]   *** New best raw accuracy: 49.76% ***
+[2026-06-16 09:06:39] [INFO] [train_scratch] Epoch [2/90]
+[2026-06-16 09:07:00] [INFO] [train_scratch]   Train -> Loss: 0.7237, Acc(approx): 55.17%
+[2026-06-16 09:07:03] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6703, Acc: 54.84%
+[2026-06-16 09:07:03] [INFO] [train_scratch]   Val(raw) PredDist -> cat=304, dog=2196
+[2026-06-16 09:07:05] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6869, Acc: 51.72%
+[2026-06-16 09:07:05] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2456, dog=44
+[2026-06-16 09:07:07] [INFO] [train_scratch]   *** New best raw accuracy: 54.84% ***
+[2026-06-16 09:07:07] [INFO] [train_scratch] Epoch [3/90]
+[2026-06-16 09:07:27] [INFO] [train_scratch]   Train -> Loss: 0.6886, Acc(approx): 57.59%
+[2026-06-16 09:07:30] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6390, Acc: 62.44%
+[2026-06-16 09:07:30] [INFO] [train_scratch]   Val(raw) PredDist -> cat=786, dog=1714
+[2026-06-16 09:07:32] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6699, Acc: 55.80%
+[2026-06-16 09:07:32] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2302, dog=198
+[2026-06-16 09:07:34] [INFO] [train_scratch]   *** New best raw accuracy: 62.44% ***
+[2026-06-16 09:07:34] [INFO] [train_scratch] Epoch [4/90]
+[2026-06-16 09:07:54] [INFO] [train_scratch]   Train -> Loss: 0.6675, Acc(approx): 60.49%
+[2026-06-16 09:07:57] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6251, Acc: 62.32%
+[2026-06-16 09:07:57] [INFO] [train_scratch]   Val(raw) PredDist -> cat=909, dog=1591
+[2026-06-16 09:07:59] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6374, Acc: 62.68%
+[2026-06-16 09:07:59] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1944, dog=556
+[2026-06-16 09:08:00] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 09:08:00] [INFO] [train_scratch] Epoch [5/90]
+[2026-06-16 09:08:20] [INFO] [train_scratch]   Train -> Loss: 0.6479, Acc(approx): 62.72%
+[2026-06-16 09:08:23] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5840, Acc: 70.28%
+[2026-06-16 09:08:23] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1582, dog=918
+[2026-06-16 09:08:25] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6104, Acc: 67.12%
+[2026-06-16 09:08:25] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1791, dog=709
+[2026-06-16 09:08:27] [INFO] [train_scratch]   *** New best raw accuracy: 70.28% ***
+[2026-06-16 09:08:27] [INFO] [train_scratch] Epoch [6/90]
+[2026-06-16 09:08:47] [INFO] [train_scratch]   Train -> Loss: 0.6297, Acc(approx): 65.00%
+[2026-06-16 09:08:49] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5940, Acc: 67.84%
+[2026-06-16 09:08:49] [INFO] [train_scratch]   Val(raw) PredDist -> cat=701, dog=1799
+[2026-06-16 09:08:52] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.5828, Acc: 69.60%
+[2026-06-16 09:08:52] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1833, dog=667
+[2026-06-16 09:08:52] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 09:08:52] [INFO] [train_scratch] Epoch [7/90]
+[2026-06-16 09:09:13] [INFO] [train_scratch]   Train -> Loss: 0.6017, Acc(approx): 68.14%
+[2026-06-16 09:09:16] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5998, Acc: 66.84%
+[2026-06-16 09:09:16] [INFO] [train_scratch]   Val(raw) PredDist -> cat=690, dog=1810
+[2026-06-16 09:09:18] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.5627, Acc: 69.32%
+[2026-06-16 09:09:18] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1922, dog=578
+[2026-06-16 09:09:18] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 09:09:18] [INFO] [train_scratch] Epoch [8/90]
+[2026-06-16 09:09:39] [INFO] [train_scratch]   Train -> Loss: 0.5909, Acc(approx): 69.67%
+[2026-06-16 09:09:41] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4931, Acc: 76.08%
+[2026-06-16 09:09:41] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1709, dog=791
+[2026-06-16 09:09:44] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.5109, Acc: 75.48%
+[2026-06-16 09:09:44] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1716, dog=784
+[2026-06-16 09:09:45] [INFO] [train_scratch]   *** New best raw accuracy: 76.08% ***
+[2026-06-16 09:09:45] [INFO] [train_scratch] Epoch [9/90]
+[2026-06-16 09:10:06] [INFO] [train_scratch]   Train -> Loss: 0.5761, Acc(approx): 69.69%
+[2026-06-16 09:10:08] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5327, Acc: 73.56%
+[2026-06-16 09:10:08] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1880, dog=620
+[2026-06-16 09:10:11] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.4965, Acc: 74.60%
+[2026-06-16 09:10:11] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1804, dog=696
+[2026-06-16 09:10:11] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 09:10:11] [INFO] [train_scratch] Epoch [10/90]
+[2026-06-16 09:10:32] [INFO] [train_scratch]   Train -> Loss: 0.5504, Acc(approx): 74.20%
+[2026-06-16 09:10:34] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5810, Acc: 72.96%
+[2026-06-16 09:10:34] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1723, dog=777
+[2026-06-16 09:10:37] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.4433, Acc: 78.48%
+[2026-06-16 09:10:37] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1719, dog=781
+[2026-06-16 09:10:37] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 09:10:37] [INFO] [train_scratch] Epoch [11/90]
+[2026-06-16 09:10:58] [INFO] [train_scratch]   Train -> Loss: 0.5398, Acc(approx): 74.91%
+[2026-06-16 09:11:00] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4798, Acc: 73.92%
+[2026-06-16 09:11:00] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1885, dog=615
+[2026-06-16 09:11:03] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.3842, Acc: 83.36%
+[2026-06-16 09:11:03] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1577, dog=923
+[2026-06-16 09:11:03] [INFO] [train_scratch]   EarlyStop patience: 3/15
+[2026-06-16 09:11:03] [INFO] [train_scratch] Epoch [12/90]
+[2026-06-16 09:11:24] [INFO] [train_scratch]   Train -> Loss: 0.5118, Acc(approx): 74.55%
+[2026-06-16 09:11:27] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5055, Acc: 77.44%
+[2026-06-16 09:11:27] [INFO] [train_scratch]   Val(raw) PredDist -> cat=769, dog=1731
+[2026-06-16 09:11:29] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.3487, Acc: 85.36%
+[2026-06-16 09:11:29] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1535, dog=965
+[2026-06-16 09:11:31] [INFO] [train_scratch]   *** New best raw accuracy: 77.44% ***
+[2026-06-16 09:11:31] [INFO] [train_scratch] Epoch [13/90]
+[2026-06-16 09:11:52] [INFO] [train_scratch]   Train -> Loss: 0.4823, Acc(approx): 74.45%
+[2026-06-16 09:11:54] [INFO] [train_scratch]   Val(raw) -> Loss: 0.3036, Acc: 87.96%
+[2026-06-16 09:11:54] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1434, dog=1066
+[2026-06-16 09:11:56] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.3000, Acc: 89.48%
+[2026-06-16 09:11:56] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1436, dog=1064
+[2026-06-16 09:11:58] [INFO] [train_scratch]   *** New best raw accuracy: 87.96% ***
+[2026-06-16 09:11:58] [INFO] [train_scratch] Epoch [14/90]
+[2026-06-16 09:12:18] [INFO] [train_scratch]   Train -> Loss: 0.4776, Acc(approx): 79.31%
+[2026-06-16 09:12:21] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2946, Acc: 90.24%
+[2026-06-16 09:12:21] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1347, dog=1153
+[2026-06-16 09:12:23] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.2754, Acc: 91.04%
+[2026-06-16 09:12:23] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1411, dog=1089
+[2026-06-16 09:12:25] [INFO] [train_scratch]   *** New best raw accuracy: 90.24% ***
+[2026-06-16 09:12:25] [INFO] [train_scratch] Epoch [15/90]
+[2026-06-16 09:12:45] [INFO] [train_scratch]   Train -> Loss: 0.4651, Acc(approx): 77.71%
+[2026-06-16 09:12:48] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2601, Acc: 91.24%
+[2026-06-16 09:12:48] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1366, dog=1134
+[2026-06-16 09:12:50] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.2410, Acc: 92.52%
+[2026-06-16 09:12:50] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1362, dog=1138
+[2026-06-16 09:12:52] [INFO] [train_scratch]   *** New best raw accuracy: 91.24% ***
+[2026-06-16 09:12:52] [INFO] [train_scratch] Epoch [16/90]
+[2026-06-16 09:13:13] [INFO] [train_scratch]   Train -> Loss: 0.4604, Acc(approx): 79.26%
+[2026-06-16 09:13:15] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2445, Acc: 90.84%
+[2026-06-16 09:13:15] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1122, dog=1378
+[2026-06-16 09:13:18] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.2203, Acc: 93.56%
+[2026-06-16 09:13:18] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1340, dog=1160
+[2026-06-16 09:13:18] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 09:13:18] [INFO] [train_scratch] Epoch [17/90]
+[2026-06-16 09:13:38] [INFO] [train_scratch]   Train -> Loss: 0.4494, Acc(approx): 83.31%
+[2026-06-16 09:13:41] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2947, Acc: 89.76%
+[2026-06-16 09:13:41] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1175, dog=1325
+[2026-06-16 09:13:43] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.2037, Acc: 94.56%
+[2026-06-16 09:13:43] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1279, dog=1221
+[2026-06-16 09:13:44] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 09:13:44] [INFO] [train_scratch] Epoch [18/90]
+[2026-06-16 09:14:04] [INFO] [train_scratch]   Train -> Loss: 0.4328, Acc(approx): 81.32%
+[2026-06-16 09:14:06] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2334, Acc: 91.92%
+[2026-06-16 09:14:06] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1381, dog=1119
+[2026-06-16 09:14:09] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1898, Acc: 95.28%
+[2026-06-16 09:14:09] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1253, dog=1247
+[2026-06-16 09:14:10] [INFO] [train_scratch]   *** New best raw accuracy: 91.92% ***
+[2026-06-16 09:14:10] [INFO] [train_scratch] Epoch [19/90]
+[2026-06-16 09:14:31] [INFO] [train_scratch]   Train -> Loss: 0.4178, Acc(approx): 82.73%
+[2026-06-16 09:14:33] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2320, Acc: 93.04%
+[2026-06-16 09:14:33] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1157, dog=1343
+[2026-06-16 09:14:36] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1786, Acc: 95.56%
+[2026-06-16 09:14:36] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1258, dog=1242
+[2026-06-16 09:14:37] [INFO] [train_scratch]   *** New best raw accuracy: 93.04% ***
+[2026-06-16 09:14:37] [INFO] [train_scratch] Epoch [20/90]
+[2026-06-16 09:14:58] [INFO] [train_scratch]   Train -> Loss: 0.4458, Acc(approx): 81.38%
+[2026-06-16 09:15:00] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2904, Acc: 87.40%
+[2026-06-16 09:15:00] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1564, dog=936
+[2026-06-16 09:15:03] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1816, Acc: 95.56%
+[2026-06-16 09:15:03] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1290, dog=1210
+[2026-06-16 09:15:03] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 09:15:03] [INFO] [train_scratch] Epoch [21/90]
+[2026-06-16 09:15:24] [INFO] [train_scratch]   Train -> Loss: 0.4371, Acc(approx): 82.26%
+[2026-06-16 09:15:27] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2403, Acc: 91.24%
+[2026-06-16 09:15:27] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1204, dog=1296
+[2026-06-16 09:15:29] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1794, Acc: 95.32%
+[2026-06-16 09:15:29] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1294, dog=1206
+[2026-06-16 09:15:30] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 09:15:30] [INFO] [train_scratch] Epoch [22/90]
+[2026-06-16 09:15:51] [INFO] [train_scratch]   Train -> Loss: 0.3922, Acc(approx): 81.66%
+[2026-06-16 09:15:53] [INFO] [train_scratch]   Val(raw) -> Loss: 0.3131, Acc: 87.16%
+[2026-06-16 09:15:53] [INFO] [train_scratch]   Val(raw) PredDist -> cat=954, dog=1546
+[2026-06-16 09:15:56] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1643, Acc: 95.48%
+[2026-06-16 09:15:56] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1286, dog=1214
+[2026-06-16 09:15:56] [INFO] [train_scratch]   EarlyStop patience: 3/15
+[2026-06-16 09:15:56] [INFO] [train_scratch] Epoch [23/90]
+[2026-06-16 09:16:23] [INFO] [train_scratch]   Train -> Loss: 0.4096, Acc(approx): 83.60%
+[2026-06-16 09:16:25] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2180, Acc: 93.48%
+[2026-06-16 09:16:25] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1278, dog=1222
+[2026-06-16 09:16:27] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1612, Acc: 95.80%
+[2026-06-16 09:16:27] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1294, dog=1206
+[2026-06-16 09:16:29] [INFO] [train_scratch]   *** New best raw accuracy: 93.48% ***
+[2026-06-16 09:16:29] [INFO] [train_scratch] Epoch [24/90]
+[2026-06-16 09:16:50] [INFO] [train_scratch]   Train -> Loss: 0.4148, Acc(approx): 84.69%
+[2026-06-16 09:16:52] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2347, Acc: 92.00%
+[2026-06-16 09:16:52] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1199, dog=1301
+[2026-06-16 09:16:55] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1615, Acc: 96.08%
+[2026-06-16 09:16:55] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1263, dog=1237
+[2026-06-16 09:16:55] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 09:16:55] [INFO] [train_scratch] Epoch [25/90]
+[2026-06-16 09:17:16] [INFO] [train_scratch]   Train -> Loss: 0.4114, Acc(approx): 81.26%
+[2026-06-16 09:17:18] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1729, Acc: 94.64%
+[2026-06-16 09:17:18] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1317, dog=1183
+[2026-06-16 09:17:21] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1570, Acc: 96.44%
+[2026-06-16 09:17:21] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1244, dog=1256
+[2026-06-16 09:17:22] [INFO] [train_scratch]   *** New best raw accuracy: 94.64% ***
+[2026-06-16 09:17:22] [INFO] [train_scratch] Epoch [26/90]
+[2026-06-16 09:17:43] [INFO] [train_scratch]   Train -> Loss: 0.4069, Acc(approx): 83.08%
+[2026-06-16 09:17:45] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1980, Acc: 93.48%
+[2026-06-16 09:17:45] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1190, dog=1310
+[2026-06-16 09:17:47] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1499, Acc: 96.72%
+[2026-06-16 09:17:47] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1259, dog=1241
+[2026-06-16 09:17:48] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 09:17:48] [INFO] [train_scratch] Epoch [27/90]
+[2026-06-16 09:18:09] [INFO] [train_scratch]   Train -> Loss: 0.3922, Acc(approx): 82.78%
+[2026-06-16 09:18:11] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1922, Acc: 93.36%
+[2026-06-16 09:18:11] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1369, dog=1131
+[2026-06-16 09:18:14] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1434, Acc: 96.92%
+[2026-06-16 09:18:14] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1248, dog=1252
+[2026-06-16 09:18:14] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 09:18:14] [INFO] [train_scratch] Epoch [28/90]
+[2026-06-16 09:18:35] [INFO] [train_scratch]   Train -> Loss: 0.3913, Acc(approx): 84.15%
+[2026-06-16 09:18:38] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2266, Acc: 91.96%
+[2026-06-16 09:18:38] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1378, dog=1122
+[2026-06-16 09:18:40] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1385, Acc: 97.00%
+[2026-06-16 09:18:40] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1262, dog=1238
+[2026-06-16 09:18:41] [INFO] [train_scratch]   EarlyStop patience: 3/15
+[2026-06-16 09:18:41] [INFO] [train_scratch] Epoch [29/90]
+[2026-06-16 09:19:01] [INFO] [train_scratch]   Train -> Loss: 0.4120, Acc(approx): 83.18%
+[2026-06-16 09:19:04] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2065, Acc: 93.84%
+[2026-06-16 09:19:04] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1179, dog=1321
+[2026-06-16 09:19:06] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1387, Acc: 97.04%
+[2026-06-16 09:19:06] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1251, dog=1249
+[2026-06-16 09:19:07] [INFO] [train_scratch]   EarlyStop patience: 4/15
+[2026-06-16 09:19:07] [INFO] [train_scratch] Epoch [30/90]
+[2026-06-16 09:19:27] [INFO] [train_scratch]   Train -> Loss: 0.4113, Acc(approx): 81.14%
+[2026-06-16 09:19:30] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2459, Acc: 92.32%
+[2026-06-16 09:19:30] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1433, dog=1067
+[2026-06-16 09:19:32] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1409, Acc: 97.20%
+[2026-06-16 09:19:32] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1265, dog=1235
+[2026-06-16 09:19:32] [INFO] [train_scratch]   EarlyStop patience: 5/15
+[2026-06-16 09:19:32] [INFO] [train_scratch] Epoch [31/90]
+[2026-06-16 09:19:53] [INFO] [train_scratch]   Train -> Loss: 0.4025, Acc(approx): 84.77%
+[2026-06-16 09:19:55] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4469, Acc: 80.04%
+[2026-06-16 09:19:55] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1756, dog=744
+[2026-06-16 09:19:58] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1398, Acc: 97.40%
+[2026-06-16 09:19:58] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1264, dog=1236
+[2026-06-16 09:19:58] [INFO] [train_scratch]   EarlyStop patience: 6/15
+[2026-06-16 09:19:58] [INFO] [train_scratch] Epoch [32/90]
+[2026-06-16 09:20:19] [INFO] [train_scratch]   Train -> Loss: 0.3870, Acc(approx): 85.15%
+[2026-06-16 09:20:22] [INFO] [train_scratch]   Val(raw) -> Loss: 0.3951, Acc: 82.00%
+[2026-06-16 09:20:22] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1707, dog=793
+[2026-06-16 09:20:24] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1388, Acc: 96.92%
+[2026-06-16 09:20:24] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1256, dog=1244
+[2026-06-16 09:20:25] [INFO] [train_scratch]   EarlyStop patience: 7/15
+[2026-06-16 09:20:25] [INFO] [train_scratch] Epoch [33/90]
+[2026-06-16 09:20:45] [INFO] [train_scratch]   Train -> Loss: 0.3986, Acc(approx): 84.08%
+[2026-06-16 09:20:48] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2397, Acc: 91.56%
+[2026-06-16 09:20:48] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1452, dog=1048
+[2026-06-16 09:20:50] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1386, Acc: 97.08%
+[2026-06-16 09:20:50] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1256, dog=1244
+[2026-06-16 09:20:51] [INFO] [train_scratch]   EarlyStop patience: 8/15
+[2026-06-16 09:20:51] [INFO] [train_scratch] Epoch [34/90]
+[2026-06-16 09:21:11] [INFO] [train_scratch]   Train -> Loss: 0.4104, Acc(approx): 84.15%
+[2026-06-16 09:21:13] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1922, Acc: 93.04%
+[2026-06-16 09:21:13] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1191, dog=1309
+[2026-06-16 09:21:16] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1376, Acc: 97.12%
+[2026-06-16 09:21:16] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1271, dog=1229
+[2026-06-16 09:21:16] [INFO] [train_scratch]   EarlyStop patience: 9/15
+[2026-06-16 09:21:16] [INFO] [train_scratch] Epoch [35/90]
+[2026-06-16 09:21:37] [INFO] [train_scratch]   Train -> Loss: 0.3934, Acc(approx): 84.58%
+[2026-06-16 09:21:39] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2302, Acc: 91.36%
+[2026-06-16 09:21:39] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1461, dog=1039
+[2026-06-16 09:21:42] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1376, Acc: 97.04%
+[2026-06-16 09:21:42] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1257, dog=1243
+[2026-06-16 09:21:42] [INFO] [train_scratch]   EarlyStop patience: 10/15
+[2026-06-16 09:21:42] [INFO] [train_scratch] Epoch [36/90]
+[2026-06-16 09:22:03] [INFO] [train_scratch]   Train -> Loss: 0.3809, Acc(approx): 84.23%
+[2026-06-16 09:22:06] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2314, Acc: 92.08%
+[2026-06-16 09:22:06] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1443, dog=1057
+[2026-06-16 09:22:08] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1335, Acc: 97.20%
+[2026-06-16 09:22:08] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1269, dog=1231
+[2026-06-16 09:22:09] [INFO] [train_scratch]   EarlyStop patience: 11/15
+[2026-06-16 09:22:09] [INFO] [train_scratch] Epoch [37/90]
+[2026-06-16 09:22:29] [INFO] [train_scratch]   Train -> Loss: 0.3858, Acc(approx): 84.68%
+[2026-06-16 09:22:32] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1757, Acc: 94.68%
+[2026-06-16 09:22:32] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1322, dog=1178
+[2026-06-16 09:22:34] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1340, Acc: 97.32%
+[2026-06-16 09:22:34] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1262, dog=1238
+[2026-06-16 09:22:36] [INFO] [train_scratch]   *** New best raw accuracy: 94.68% ***
+[2026-06-16 09:22:36] [INFO] [train_scratch] Epoch [38/90]
+[2026-06-16 09:22:57] [INFO] [train_scratch]   Train -> Loss: 0.3729, Acc(approx): 85.62%
+[2026-06-16 09:22:59] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2987, Acc: 88.52%
+[2026-06-16 09:22:59] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1482, dog=1018
+[2026-06-16 09:23:01] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1305, Acc: 97.16%
+[2026-06-16 09:23:01] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1258, dog=1242
+[2026-06-16 09:23:02] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 09:23:02] [INFO] [train_scratch] Epoch [39/90]
+[2026-06-16 09:23:22] [INFO] [train_scratch]   Train -> Loss: 0.3675, Acc(approx): 88.86%
+[2026-06-16 09:23:25] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2535, Acc: 89.64%
+[2026-06-16 09:23:25] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1508, dog=992
+[2026-06-16 09:23:27] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1289, Acc: 97.16%
+[2026-06-16 09:23:27] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1250, dog=1250
+[2026-06-16 09:23:27] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 09:23:27] [INFO] [train_scratch] Epoch [40/90]
+[2026-06-16 09:23:48] [INFO] [train_scratch]   Train -> Loss: 0.3722, Acc(approx): 83.91%
+[2026-06-16 09:23:51] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2329, Acc: 94.88%
+[2026-06-16 09:23:51] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1203, dog=1297
+[2026-06-16 09:23:53] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1288, Acc: 97.04%
+[2026-06-16 09:23:53] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1251, dog=1249
+[2026-06-16 09:23:54] [INFO] [train_scratch]   *** New best raw accuracy: 94.88% ***
+[2026-06-16 09:23:54] [INFO] [train_scratch] Epoch [41/90]
+[2026-06-16 09:24:15] [INFO] [train_scratch]   Train -> Loss: 0.3945, Acc(approx): 86.27%
+[2026-06-16 09:24:17] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2389, Acc: 92.88%
+[2026-06-16 09:24:17] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1405, dog=1095
+[2026-06-16 09:24:20] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1352, Acc: 97.12%
+[2026-06-16 09:24:20] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1249, dog=1251
+[2026-06-16 09:24:20] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 09:24:20] [INFO] [train_scratch] Epoch [42/90]
+[2026-06-16 09:24:41] [INFO] [train_scratch]   Train -> Loss: 0.3929, Acc(approx): 85.00%
+[2026-06-16 09:24:43] [INFO] [train_scratch]   Val(raw) -> Loss: 0.3061, Acc: 86.72%
+[2026-06-16 09:24:43] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1587, dog=913
+[2026-06-16 09:24:46] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1363, Acc: 97.12%
+[2026-06-16 09:24:46] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1261, dog=1239
+[2026-06-16 09:24:46] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 09:24:46] [INFO] [train_scratch] Epoch [43/90]
+[2026-06-16 09:25:06] [INFO] [train_scratch]   Train -> Loss: 0.3890, Acc(approx): 84.16%
+[2026-06-16 09:25:09] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1784, Acc: 94.60%
+[2026-06-16 09:25:09] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1188, dog=1312
+[2026-06-16 09:25:11] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1332, Acc: 96.96%
+[2026-06-16 09:25:11] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1257, dog=1243
+[2026-06-16 09:25:12] [INFO] [train_scratch]   EarlyStop patience: 3/15
+[2026-06-16 09:25:12] [INFO] [train_scratch] Epoch [44/90]
+[2026-06-16 09:25:33] [INFO] [train_scratch]   Train -> Loss: 0.3749, Acc(approx): 85.81%
+[2026-06-16 09:25:35] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1404, Acc: 96.44%
+[2026-06-16 09:25:35] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1248, dog=1252
+[2026-06-16 09:25:38] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1304, Acc: 97.48%
+[2026-06-16 09:25:38] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1268, dog=1232
+[2026-06-16 09:25:39] [INFO] [train_scratch]   *** New best raw accuracy: 96.44% ***
+[2026-06-16 09:25:39] [INFO] [train_scratch] Epoch [45/90]
+[2026-06-16 09:26:00] [INFO] [train_scratch]   Train -> Loss: 0.3845, Acc(approx): 87.14%
+[2026-06-16 09:26:02] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1773, Acc: 94.72%
+[2026-06-16 09:26:02] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1297, dog=1203
+[2026-06-16 09:26:05] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1291, Acc: 97.20%
+[2026-06-16 09:26:05] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1271, dog=1229
+[2026-06-16 09:26:05] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 09:26:05] [INFO] [train_scratch] Epoch [46/90]
+[2026-06-16 09:26:26] [INFO] [train_scratch]   Train -> Loss: 0.3731, Acc(approx): 84.12%
+[2026-06-16 09:26:28] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2446, Acc: 93.80%
+[2026-06-16 09:26:28] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1192, dog=1308
+[2026-06-16 09:26:30] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1287, Acc: 97.48%
+[2026-06-16 09:26:30] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1276, dog=1224
+[2026-06-16 09:26:31] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 09:26:31] [INFO] [train_scratch] Epoch [47/90]
+[2026-06-16 09:26:52] [INFO] [train_scratch]   Train -> Loss: 0.3738, Acc(approx): 82.48%
+[2026-06-16 09:26:54] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1686, Acc: 95.64%
+[2026-06-16 09:26:54] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1262, dog=1238
+[2026-06-16 09:26:56] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1288, Acc: 97.72%
+[2026-06-16 09:26:56] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1270, dog=1230
+[2026-06-16 09:26:57] [INFO] [train_scratch]   EarlyStop patience: 3/15
+[2026-06-16 09:26:57] [INFO] [train_scratch] Epoch [48/90]
+[2026-06-16 09:27:18] [INFO] [train_scratch]   Train -> Loss: 0.3826, Acc(approx): 85.47%
+[2026-06-16 09:27:20] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1655, Acc: 95.12%
+[2026-06-16 09:27:20] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1211, dog=1289
+[2026-06-16 09:27:23] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1275, Acc: 97.48%
+[2026-06-16 09:27:23] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1286, dog=1214
+[2026-06-16 09:27:23] [INFO] [train_scratch]   EarlyStop patience: 4/15
+[2026-06-16 09:27:23] [INFO] [train_scratch] Epoch [49/90]
+[2026-06-16 09:27:44] [INFO] [train_scratch]   Train -> Loss: 0.3679, Acc(approx): 84.98%
+[2026-06-16 09:27:46] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1878, Acc: 95.92%
+[2026-06-16 09:27:46] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1321, dog=1179
+[2026-06-16 09:27:49] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1246, Acc: 97.56%
+[2026-06-16 09:27:49] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1278, dog=1222
+[2026-06-16 09:27:49] [INFO] [train_scratch]   EarlyStop patience: 5/15
+[2026-06-16 09:27:49] [INFO] [train_scratch] Epoch [50/90]
+[2026-06-16 09:28:10] [INFO] [train_scratch]   Train -> Loss: 0.3813, Acc(approx): 86.44%
+[2026-06-16 09:28:12] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1536, Acc: 95.60%
+[2026-06-16 09:28:12] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1339, dog=1161
+[2026-06-16 09:28:15] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1275, Acc: 97.60%
+[2026-06-16 09:28:15] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1273, dog=1227
+[2026-06-16 09:28:15] [INFO] [train_scratch]   EarlyStop patience: 6/15
+[2026-06-16 09:28:15] [INFO] [train_scratch] Epoch [51/90]
+[2026-06-16 09:28:36] [INFO] [train_scratch]   Train -> Loss: 0.3529, Acc(approx): 87.67%
+[2026-06-16 09:28:38] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1560, Acc: 96.24%
+[2026-06-16 09:28:38] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1233, dog=1267
+[2026-06-16 09:28:41] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1204, Acc: 97.84%
+[2026-06-16 09:28:41] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1259, dog=1241
+[2026-06-16 09:28:41] [INFO] [train_scratch]   EarlyStop patience: 7/15
+[2026-06-16 09:28:41] [INFO] [train_scratch] Epoch [52/90]
+[2026-06-16 09:29:02] [INFO] [train_scratch]   Train -> Loss: 0.3602, Acc(approx): 88.71%
+[2026-06-16 09:29:05] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2530, Acc: 92.44%
+[2026-06-16 09:29:05] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1122, dog=1378
+[2026-06-16 09:29:08] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1179, Acc: 97.64%
+[2026-06-16 09:29:08] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1250, dog=1250
+[2026-06-16 09:29:09] [INFO] [train_scratch]   EarlyStop patience: 8/15
+[2026-06-16 09:29:09] [INFO] [train_scratch] Epoch [53/90]
+[2026-06-16 09:29:34] [INFO] [train_scratch]   Train -> Loss: 0.3597, Acc(approx): 85.59%
+[2026-06-16 09:29:36] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1873, Acc: 94.80%
+[2026-06-16 09:29:36] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1375, dog=1125
+[2026-06-16 09:29:39] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1211, Acc: 97.72%
+[2026-06-16 09:29:39] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1266, dog=1234
+[2026-06-16 09:29:39] [INFO] [train_scratch]   EarlyStop patience: 9/15
+[2026-06-16 09:29:39] [INFO] [train_scratch] Epoch [54/90]
+[2026-06-16 09:30:00] [INFO] [train_scratch]   Train -> Loss: 0.3645, Acc(approx): 83.95%
+[2026-06-16 09:30:02] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1852, Acc: 95.16%
+[2026-06-16 09:30:02] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1346, dog=1154
+[2026-06-16 09:30:05] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1210, Acc: 97.64%
+[2026-06-16 09:30:05] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1254, dog=1246
+[2026-06-16 09:30:05] [INFO] [train_scratch]   EarlyStop patience: 10/15
+[2026-06-16 09:30:05] [INFO] [train_scratch] Epoch [55/90]
+[2026-06-16 09:30:26] [INFO] [train_scratch]   Train -> Loss: 0.3594, Acc(approx): 84.74%
+[2026-06-16 09:30:28] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1835, Acc: 93.80%
+[2026-06-16 09:30:28] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1388, dog=1112
+[2026-06-16 09:30:30] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1180, Acc: 98.12%
+[2026-06-16 09:30:30] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1258, dog=1242
+[2026-06-16 09:30:31] [INFO] [train_scratch]   EarlyStop patience: 11/15
+[2026-06-16 09:30:31] [INFO] [train_scratch] Epoch [56/90]
+[2026-06-16 09:30:52] [INFO] [train_scratch]   Train -> Loss: 0.3490, Acc(approx): 86.52%
+[2026-06-16 09:30:54] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1390, Acc: 96.28%
+[2026-06-16 09:30:54] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1286, dog=1214
+[2026-06-16 09:30:56] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1133, Acc: 98.00%
+[2026-06-16 09:30:56] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1259, dog=1241
+[2026-06-16 09:30:57] [INFO] [train_scratch]   EarlyStop patience: 12/15
+[2026-06-16 09:30:57] [INFO] [train_scratch] Epoch [57/90]
+[2026-06-16 09:31:18] [INFO] [train_scratch]   Train -> Loss: 0.3535, Acc(approx): 85.19%
+[2026-06-16 09:31:20] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1694, Acc: 94.80%
+[2026-06-16 09:31:20] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1363, dog=1137
+[2026-06-16 09:31:23] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1142, Acc: 97.92%
+[2026-06-16 09:31:23] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1261, dog=1239
+[2026-06-16 09:31:23] [INFO] [train_scratch]   EarlyStop patience: 13/15
+[2026-06-16 09:31:23] [INFO] [train_scratch] Epoch [58/90]
+[2026-06-16 09:31:43] [INFO] [train_scratch]   Train -> Loss: 0.3487, Acc(approx): 86.92%
+[2026-06-16 09:31:46] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1836, Acc: 95.92%
+[2026-06-16 09:31:46] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1347, dog=1153
+[2026-06-16 09:31:48] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1120, Acc: 97.92%
+[2026-06-16 09:31:48] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1265, dog=1235
+[2026-06-16 09:31:49] [INFO] [train_scratch]   EarlyStop patience: 14/15
+[2026-06-16 09:31:49] [INFO] [train_scratch] Epoch [59/90]
+[2026-06-16 09:32:09] [INFO] [train_scratch]   Train -> Loss: 0.2936, Acc(approx): 91.33%
+[2026-06-16 09:32:12] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1378, Acc: 95.56%
+[2026-06-16 09:32:12] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1276, dog=1224
+[2026-06-16 09:32:14] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1015, Acc: 98.24%
+[2026-06-16 09:32:14] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1253, dog=1247
+[2026-06-16 09:32:14] [INFO] [train_scratch]   EarlyStop patience: 15/15
+[2026-06-16 09:32:14] [INFO] [train_scratch] Early stopping triggered at epoch 59
+[2026-06-16 09:32:14] [INFO] [train_scratch] Scratch training finished. Best validation accuracy: 96.44%
+[2026-06-16 09:32:14] [INFO] [train_scratch] ==================================================
+[2026-06-16 10:24:59] [INFO] [train_scratch] ==================================================
+[2026-06-16 10:24:59] [INFO] [train_scratch] Scratch training (SE-ResNet) started
+[2026-06-16 10:24:59] [INFO] [train_scratch] Device: cuda
+[2026-06-16 10:24:59] [INFO] [train_scratch] Layers=(2, 2, 2, 2), Batch=256, Epochs=90, Warmup=3, BaseLR=0.2
+[2026-06-16 10:24:59] [INFO] [train_scratch] Loading datasets (strong augmentation, persistent workers)...
+[2026-06-16 10:25:02] [INFO] [train_scratch] Building SE-ResNet...
+[2026-06-16 10:25:04] [INFO] [train_scratch] torch.compile enabled (mode=default)
+[2026-06-16 10:25:04] [INFO] [train_scratch] GPU memory before training: GPU=0.1/0.1G
+[2026-06-16 10:25:04] [INFO] [train_scratch] Epoch [1/90]
+[2026-06-16 10:25:59] [INFO] [train_scratch]   Train -> Loss: 0.7659, Acc(approx): 53.61%
+[2026-06-16 10:26:02] [INFO] [train_scratch]   Val(raw) -> Loss: 1.1311, Acc: 50.64%
+[2026-06-16 10:26:02] [INFO] [train_scratch]   Val(raw) PredDist -> cat=69, dog=2431
+[2026-06-16 10:26:05] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6915, Acc: 50.60%
+[2026-06-16 10:26:05] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2480, dog=20
+[2026-06-16 10:26:06] [INFO] [train_scratch]   *** New best accuracy: 50.60% ***
+[2026-06-16 10:26:06] [INFO] [train_scratch] Epoch [2/90]
+[2026-06-16 10:26:28] [INFO] [train_scratch]   Train -> Loss: 0.7254, Acc(approx): 55.33%
+[2026-06-16 10:26:30] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6658, Acc: 56.32%
+[2026-06-16 10:26:30] [INFO] [train_scratch]   Val(raw) PredDist -> cat=469, dog=2031
+[2026-06-16 10:26:33] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6910, Acc: 50.68%
+[2026-06-16 10:26:33] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2490, dog=10
+[2026-06-16 10:26:35] [INFO] [train_scratch]   *** New best accuracy: 50.68% ***
+[2026-06-16 10:26:35] [INFO] [train_scratch] Epoch [3/90]
+[2026-06-16 10:26:56] [INFO] [train_scratch]   Train -> Loss: 0.6944, Acc(approx): 56.83%
+[2026-06-16 10:26:58] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6346, Acc: 63.36%
+[2026-06-16 10:26:58] [INFO] [train_scratch]   Val(raw) PredDist -> cat=979, dog=1521
+[2026-06-16 10:27:01] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6865, Acc: 52.28%
+[2026-06-16 10:27:01] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2446, dog=54
+[2026-06-16 10:27:03] [INFO] [train_scratch]   *** New best accuracy: 52.28% ***
+[2026-06-16 10:27:03] [INFO] [train_scratch] Epoch [4/90]
+[2026-06-16 10:27:24] [INFO] [train_scratch]   Train -> Loss: 0.6710, Acc(approx): 59.76%
+[2026-06-16 10:27:27] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6452, Acc: 56.60%
+[2026-06-16 10:27:27] [INFO] [train_scratch]   Val(raw) PredDist -> cat=366, dog=2134
+[2026-06-16 10:27:29] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6843, Acc: 53.72%
+[2026-06-16 10:27:29] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2394, dog=106
+[2026-06-16 10:27:31] [INFO] [train_scratch]   *** New best accuracy: 53.72% ***
+[2026-06-16 10:27:31] [INFO] [train_scratch] Epoch [5/90]
+[2026-06-16 10:27:52] [INFO] [train_scratch]   Train -> Loss: 0.6541, Acc(approx): 61.62%
+[2026-06-16 10:27:55] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6049, Acc: 69.68%
+[2026-06-16 10:27:55] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1569, dog=931
+[2026-06-16 10:27:57] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6695, Acc: 55.56%
+[2026-06-16 10:27:57] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2306, dog=194
+[2026-06-16 10:27:59] [INFO] [train_scratch]   *** New best accuracy: 55.56% ***
+[2026-06-16 10:27:59] [INFO] [train_scratch] Epoch [6/90]
+[2026-06-16 10:28:20] [INFO] [train_scratch]   Train -> Loss: 0.6435, Acc(approx): 62.86%
+[2026-06-16 10:28:23] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5475, Acc: 74.08%
+[2026-06-16 10:28:23] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1355, dog=1145
+[2026-06-16 10:28:25] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6483, Acc: 61.08%
+[2026-06-16 10:28:25] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2078, dog=422
+[2026-06-16 10:28:27] [INFO] [train_scratch]   *** New best accuracy: 61.08% ***
+[2026-06-16 10:28:27] [INFO] [train_scratch] Epoch [7/90]
+[2026-06-16 10:28:48] [INFO] [train_scratch]   Train -> Loss: 0.6160, Acc(approx): 66.58%
+[2026-06-16 10:28:51] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5538, Acc: 72.72%
+[2026-06-16 10:28:51] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1287, dog=1213
+[2026-06-16 10:28:53] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6491, Acc: 60.92%
+[2026-06-16 10:28:53] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2116, dog=384
+[2026-06-16 10:28:54] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 10:28:54] [INFO] [train_scratch] Epoch [8/90]
+[2026-06-16 10:29:15] [INFO] [train_scratch]   Train -> Loss: 0.6031, Acc(approx): 68.36%
+[2026-06-16 10:29:18] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4782, Acc: 78.12%
+[2026-06-16 10:29:18] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1600, dog=900
+[2026-06-16 10:29:20] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6493, Acc: 60.00%
+[2026-06-16 10:29:20] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2183, dog=317
+[2026-06-16 10:29:21] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 10:29:21] [INFO] [train_scratch] Epoch [9/90]
+[2026-06-16 10:29:42] [INFO] [train_scratch]   Train -> Loss: 0.5824, Acc(approx): 68.93%
+[2026-06-16 10:29:45] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5297, Acc: 74.00%
+[2026-06-16 10:29:45] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1759, dog=741
+[2026-06-16 10:29:47] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6318, Acc: 61.32%
+[2026-06-16 10:29:47] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2166, dog=334
+[2026-06-16 10:29:48] [INFO] [train_scratch]   *** New best accuracy: 61.32% ***
+[2026-06-16 10:29:48] [INFO] [train_scratch] Epoch [10/90]
+[2026-06-16 10:30:10] [INFO] [train_scratch]   Train -> Loss: 0.5598, Acc(approx): 73.10%
+[2026-06-16 10:30:12] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6137, Acc: 71.40%
+[2026-06-16 10:30:12] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1006, dog=1494
+[2026-06-16 10:30:14] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6174, Acc: 61.84%
+[2026-06-16 10:30:14] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2191, dog=309
+[2026-06-16 10:30:16] [INFO] [train_scratch]   *** New best accuracy: 61.84% ***
+[2026-06-16 10:30:16] [INFO] [train_scratch] Epoch [11/90]
+[2026-06-16 10:30:37] [INFO] [train_scratch]   Train -> Loss: 0.5514, Acc(approx): 73.50%
+[2026-06-16 10:30:40] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5129, Acc: 72.56%
+[2026-06-16 10:30:40] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1875, dog=625
+[2026-06-16 10:30:42] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.5765, Acc: 66.44%
+[2026-06-16 10:30:42] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2070, dog=430
+[2026-06-16 10:30:44] [INFO] [train_scratch]   *** New best accuracy: 66.44% ***
+[2026-06-16 10:30:44] [INFO] [train_scratch] Epoch [12/90]
+[2026-06-16 10:31:05] [INFO] [train_scratch]   Train -> Loss: 0.5310, Acc(approx): 72.85%
+[2026-06-16 10:31:08] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4123, Acc: 80.52%
+[2026-06-16 10:31:08] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1552, dog=948
+[2026-06-16 10:31:10] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.5407, Acc: 69.88%
+[2026-06-16 10:31:10] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1986, dog=514
+[2026-06-16 10:31:12] [INFO] [train_scratch]   *** New best accuracy: 69.88% ***
+[2026-06-16 10:31:12] [INFO] [train_scratch] Epoch [13/90]
+[2026-06-16 10:31:33] [INFO] [train_scratch]   Train -> Loss: 0.5098, Acc(approx): 72.61%
+[2026-06-16 10:31:35] [INFO] [train_scratch]   Val(raw) -> Loss: 0.3061, Acc: 88.44%
+[2026-06-16 10:31:35] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1352, dog=1148
+[2026-06-16 10:31:38] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.4924, Acc: 74.24%
+[2026-06-16 10:31:38] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1871, dog=629
+[2026-06-16 10:31:39] [INFO] [train_scratch]   *** New best accuracy: 74.24% ***
+[2026-06-16 10:31:39] [INFO] [train_scratch] Epoch [14/90]
+[2026-06-16 10:41:56] [INFO] [train_scratch] ==================================================
+[2026-06-16 10:41:56] [INFO] [train_scratch] Scratch training (SE-ResNet) started
+[2026-06-16 10:41:56] [INFO] [train_scratch] Device: cuda
+[2026-06-16 10:41:56] [INFO] [train_scratch] Layers=(3, 4, 6, 3), Batch=256, Epochs=90, Warmup=3, BaseLR=0.2
+[2026-06-16 10:41:56] [INFO] [train_scratch] Loading datasets (strong augmentation, persistent workers)...
+[2026-06-16 10:41:59] [INFO] [train_scratch] Building SE-ResNet...
+[2026-06-16 10:42:01] [INFO] [train_scratch] torch.compile enabled (mode=default)
+[2026-06-16 10:42:01] [INFO] [train_scratch] GPU memory before training: GPU=0.2/0.2G
+[2026-06-16 10:42:01] [INFO] [train_scratch] Epoch [1/90]
+[2026-06-16 10:43:28] [INFO] [train_scratch]   Train -> Loss: 0.7738, Acc(approx): 53.98%
+[2026-06-16 10:43:31] [INFO] [train_scratch]   Val(raw) -> Loss: 0.7926, Acc: 52.32%
+[2026-06-16 10:43:31] [INFO] [train_scratch]   Val(raw) PredDist -> cat=2431, dog=69
+[2026-06-16 10:43:34] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6918, Acc: 50.44%
+[2026-06-16 10:43:34] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2498, dog=2
+[2026-06-16 10:43:36] [INFO] [train_scratch]   *** New best accuracy: 50.44% ***
+[2026-06-16 10:43:36] [INFO] [train_scratch] Epoch [2/90]
+[2026-06-16 10:43:58] [INFO] [train_scratch]   Train -> Loss: 0.7329, Acc(approx): 55.84%
+[2026-06-16 10:44:00] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6723, Acc: 57.24%
+[2026-06-16 10:44:00] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1282, dog=1218
+[2026-06-16 10:44:03] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6912, Acc: 51.08%
+[2026-06-16 10:44:03] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2476, dog=24
+[2026-06-16 10:44:06] [INFO] [train_scratch]   *** New best accuracy: 51.08% ***
+[2026-06-16 10:44:06] [INFO] [train_scratch] Epoch [3/90]
+[2026-06-16 10:44:27] [INFO] [train_scratch]   Train -> Loss: 0.6940, Acc(approx): 56.81%
+[2026-06-16 10:44:29] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6213, Acc: 66.04%
+[2026-06-16 10:44:29] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1456, dog=1044
+[2026-06-16 10:44:31] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6833, Acc: 53.52%
+[2026-06-16 10:44:31] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2405, dog=95
+[2026-06-16 10:44:34] [INFO] [train_scratch]   *** New best accuracy: 53.52% ***
+[2026-06-16 10:44:34] [INFO] [train_scratch] Epoch [4/90]
+[2026-06-16 10:44:56] [INFO] [train_scratch]   Train -> Loss: 0.6698, Acc(approx): 60.34%
+[2026-06-16 10:44:59] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6111, Acc: 66.64%
+[2026-06-16 10:44:59] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1333, dog=1167
+[2026-06-16 10:45:01] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6757, Acc: 54.80%
+[2026-06-16 10:45:01] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2345, dog=155
+[2026-06-16 10:45:04] [INFO] [train_scratch]   *** New best accuracy: 54.80% ***
+[2026-06-16 10:45:04] [INFO] [train_scratch] Epoch [5/90]
+[2026-06-16 10:45:26] [INFO] [train_scratch]   Train -> Loss: 0.6538, Acc(approx): 61.68%
+[2026-06-16 10:45:29] [INFO] [train_scratch]   Val(raw) -> Loss: 0.6053, Acc: 66.40%
+[2026-06-16 10:45:29] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1061, dog=1439
+[2026-06-16 10:45:31] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6708, Acc: 57.44%
+[2026-06-16 10:45:31] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2219, dog=281
+[2026-06-16 10:45:34] [INFO] [train_scratch]   *** New best accuracy: 57.44% ***
+[2026-06-16 10:45:34] [INFO] [train_scratch] Epoch [6/90]
+[2026-06-16 10:45:55] [INFO] [train_scratch]   Train -> Loss: 0.6423, Acc(approx): 63.27%
+[2026-06-16 10:45:58] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5581, Acc: 71.64%
+[2026-06-16 10:45:58] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1004, dog=1496
+[2026-06-16 10:46:00] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6720, Acc: 56.36%
+[2026-06-16 10:46:00] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2294, dog=206
+[2026-06-16 10:46:01] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 10:46:01] [INFO] [train_scratch] Epoch [7/90]
+[2026-06-16 10:46:22] [INFO] [train_scratch]   Train -> Loss: 0.6052, Acc(approx): 68.07%
+[2026-06-16 10:46:25] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5154, Acc: 75.24%
+[2026-06-16 10:46:25] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1574, dog=926
+[2026-06-16 10:46:27] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6755, Acc: 55.64%
+[2026-06-16 10:46:27] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2332, dog=168
+[2026-06-16 10:46:28] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 10:46:28] [INFO] [train_scratch] Epoch [8/90]
+[2026-06-16 10:46:50] [INFO] [train_scratch]   Train -> Loss: 0.5890, Acc(approx): 69.78%
+[2026-06-16 10:46:52] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5173, Acc: 74.20%
+[2026-06-16 10:46:52] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1724, dog=776
+[2026-06-16 10:46:55] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6711, Acc: 56.20%
+[2026-06-16 10:46:55] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2338, dog=162
+[2026-06-16 10:46:55] [INFO] [train_scratch]   EarlyStop patience: 3/15
+[2026-06-16 10:46:55] [INFO] [train_scratch] Epoch [9/90]
+[2026-06-16 10:47:17] [INFO] [train_scratch]   Train -> Loss: 0.5702, Acc(approx): 70.35%
+[2026-06-16 10:47:19] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4501, Acc: 79.00%
+[2026-06-16 10:47:19] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1028, dog=1472
+[2026-06-16 10:47:22] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.6373, Acc: 58.60%
+[2026-06-16 10:47:22] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2280, dog=220
+[2026-06-16 10:47:24] [INFO] [train_scratch]   *** New best accuracy: 58.60% ***
+[2026-06-16 10:47:24] [INFO] [train_scratch] Epoch [10/90]
+[2026-06-16 10:47:46] [INFO] [train_scratch]   Train -> Loss: 0.5567, Acc(approx): 73.90%
+[2026-06-16 10:47:49] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4335, Acc: 80.64%
+[2026-06-16 10:47:49] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1173, dog=1327
+[2026-06-16 10:47:51] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.5745, Acc: 66.72%
+[2026-06-16 10:47:51] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=2053, dog=447
+[2026-06-16 10:47:54] [INFO] [train_scratch]   *** New best accuracy: 66.72% ***
+[2026-06-16 10:47:54] [INFO] [train_scratch] Epoch [11/90]
+[2026-06-16 10:48:15] [INFO] [train_scratch]   Train -> Loss: 0.5492, Acc(approx): 73.69%
+[2026-06-16 10:48:18] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5270, Acc: 72.40%
+[2026-06-16 10:48:18] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1873, dog=627
+[2026-06-16 10:48:20] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.5469, Acc: 69.52%
+[2026-06-16 10:48:20] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1981, dog=519
+[2026-06-16 10:48:23] [INFO] [train_scratch]   *** New best accuracy: 69.52% ***
+[2026-06-16 10:48:23] [INFO] [train_scratch] Epoch [12/90]
+[2026-06-16 10:48:45] [INFO] [train_scratch]   Train -> Loss: 0.5327, Acc(approx): 73.07%
+[2026-06-16 10:48:47] [INFO] [train_scratch]   Val(raw) -> Loss: 1.0426, Acc: 59.16%
+[2026-06-16 10:48:47] [INFO] [train_scratch]   Val(raw) PredDist -> cat=2274, dog=226
+[2026-06-16 10:48:50] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.5356, Acc: 69.92%
+[2026-06-16 10:48:50] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1979, dog=521
+[2026-06-16 10:48:53] [INFO] [train_scratch]   *** New best accuracy: 69.92% ***
+[2026-06-16 10:48:53] [INFO] [train_scratch] Epoch [13/90]
+[2026-06-16 10:49:14] [INFO] [train_scratch]   Train -> Loss: 0.5048, Acc(approx): 73.06%
+[2026-06-16 10:49:17] [INFO] [train_scratch]   Val(raw) -> Loss: 0.3252, Acc: 87.68%
+[2026-06-16 10:49:17] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1283, dog=1217
+[2026-06-16 10:49:19] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.4904, Acc: 76.00%
+[2026-06-16 10:49:19] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1801, dog=699
+[2026-06-16 10:49:22] [INFO] [train_scratch]   *** New best accuracy: 76.00% ***
+[2026-06-16 10:49:22] [INFO] [train_scratch] Epoch [14/90]
+[2026-06-16 10:49:43] [INFO] [train_scratch]   Train -> Loss: 0.4982, Acc(approx): 77.15%
+[2026-06-16 10:49:46] [INFO] [train_scratch]   Val(raw) -> Loss: 0.5249, Acc: 72.76%
+[2026-06-16 10:49:46] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1918, dog=582
+[2026-06-16 10:49:48] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.4663, Acc: 78.52%
+[2026-06-16 10:49:48] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1760, dog=740
+[2026-06-16 10:49:51] [INFO] [train_scratch]   *** New best accuracy: 78.52% ***
+[2026-06-16 10:49:51] [INFO] [train_scratch] Epoch [15/90]
+[2026-06-16 10:50:13] [INFO] [train_scratch]   Train -> Loss: 0.4808, Acc(approx): 76.23%
+[2026-06-16 10:50:15] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4564, Acc: 79.96%
+[2026-06-16 10:50:15] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1712, dog=788
+[2026-06-16 10:50:18] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.4457, Acc: 79.84%
+[2026-06-16 10:50:18] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1725, dog=775
+[2026-06-16 10:50:21] [INFO] [train_scratch]   *** New best accuracy: 79.84% ***
+[2026-06-16 10:50:21] [INFO] [train_scratch] Epoch [16/90]
+[2026-06-16 10:50:42] [INFO] [train_scratch]   Train -> Loss: 0.4761, Acc(approx): 78.09%
+[2026-06-16 10:50:45] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2440, Acc: 90.20%
+[2026-06-16 10:50:45] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1228, dog=1272
+[2026-06-16 10:50:47] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.4115, Acc: 83.88%
+[2026-06-16 10:50:47] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1624, dog=876
+[2026-06-16 10:50:50] [INFO] [train_scratch]   *** New best accuracy: 83.88% ***
+[2026-06-16 10:50:50] [INFO] [train_scratch] Epoch [17/90]
+[2026-06-16 10:51:11] [INFO] [train_scratch]   Train -> Loss: 0.4592, Acc(approx): 82.31%
+[2026-06-16 10:51:13] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4728, Acc: 78.00%
+[2026-06-16 10:51:13] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1789, dog=711
+[2026-06-16 10:51:16] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.3642, Acc: 88.00%
+[2026-06-16 10:51:16] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1509, dog=991
+[2026-06-16 10:51:19] [INFO] [train_scratch]   *** New best accuracy: 88.00% ***
+[2026-06-16 10:51:19] [INFO] [train_scratch] Epoch [18/90]
+[2026-06-16 10:51:41] [INFO] [train_scratch]   Train -> Loss: 0.4426, Acc(approx): 80.70%
+[2026-06-16 10:51:43] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4697, Acc: 78.24%
+[2026-06-16 10:51:43] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1799, dog=701
+[2026-06-16 10:51:46] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.3258, Acc: 90.40%
+[2026-06-16 10:51:46] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1453, dog=1047
+[2026-06-16 10:51:49] [INFO] [train_scratch]   *** New best accuracy: 90.40% ***
+[2026-06-16 10:51:49] [INFO] [train_scratch] Epoch [19/90]
+[2026-06-16 10:52:10] [INFO] [train_scratch]   Train -> Loss: 0.4224, Acc(approx): 82.52%
+[2026-06-16 10:52:13] [INFO] [train_scratch]   Val(raw) -> Loss: 0.3454, Acc: 86.28%
+[2026-06-16 10:52:13] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1544, dog=956
+[2026-06-16 10:52:15] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.2900, Acc: 91.80%
+[2026-06-16 10:52:15] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1426, dog=1074
+[2026-06-16 10:52:18] [INFO] [train_scratch]   *** New best accuracy: 91.80% ***
+[2026-06-16 10:52:18] [INFO] [train_scratch] Epoch [20/90]
+[2026-06-16 10:52:40] [INFO] [train_scratch]   Train -> Loss: 0.4512, Acc(approx): 81.39%
+[2026-06-16 10:52:42] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2412, Acc: 90.76%
+[2026-06-16 10:52:42] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1380, dog=1120
+[2026-06-16 10:52:45] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.2624, Acc: 93.48%
+[2026-06-16 10:52:45] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1378, dog=1122
+[2026-06-16 10:52:47] [INFO] [train_scratch]   *** New best accuracy: 93.48% ***
+[2026-06-16 10:52:47] [INFO] [train_scratch] Epoch [21/90]
+[2026-06-16 10:53:09] [INFO] [train_scratch]   Train -> Loss: 0.4380, Acc(approx): 81.67%
+[2026-06-16 10:53:11] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2384, Acc: 93.20%
+[2026-06-16 10:53:11] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1195, dog=1305
+[2026-06-16 10:53:14] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.2434, Acc: 93.96%
+[2026-06-16 10:53:14] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1362, dog=1138
+[2026-06-16 10:53:17] [INFO] [train_scratch]   *** New best accuracy: 93.96% ***
+[2026-06-16 10:53:17] [INFO] [train_scratch] Epoch [22/90]
+[2026-06-16 10:53:38] [INFO] [train_scratch]   Train -> Loss: 0.3909, Acc(approx): 82.00%
+[2026-06-16 10:53:41] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2697, Acc: 88.56%
+[2026-06-16 10:53:41] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1515, dog=985
+[2026-06-16 10:53:43] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.2208, Acc: 94.56%
+[2026-06-16 10:53:43] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1337, dog=1163
+[2026-06-16 10:53:46] [INFO] [train_scratch]   *** New best accuracy: 94.56% ***
+[2026-06-16 10:53:46] [INFO] [train_scratch] Epoch [23/90]
+[2026-06-16 10:54:08] [INFO] [train_scratch]   Train -> Loss: 0.4128, Acc(approx): 83.43%
+[2026-06-16 10:54:11] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2482, Acc: 90.44%
+[2026-06-16 10:54:11] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1468, dog=1032
+[2026-06-16 10:54:13] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.2049, Acc: 95.56%
+[2026-06-16 10:54:13] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1306, dog=1194
+[2026-06-16 10:54:16] [INFO] [train_scratch]   *** New best accuracy: 95.56% ***
+[2026-06-16 10:54:16] [INFO] [train_scratch] Epoch [24/90]
+[2026-06-16 10:54:37] [INFO] [train_scratch]   Train -> Loss: 0.4167, Acc(approx): 84.75%
+[2026-06-16 10:54:40] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2191, Acc: 93.12%
+[2026-06-16 10:54:40] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1245, dog=1255
+[2026-06-16 10:54:42] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1959, Acc: 95.88%
+[2026-06-16 10:54:42] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1294, dog=1206
+[2026-06-16 10:54:45] [INFO] [train_scratch]   *** New best accuracy: 95.88% ***
+[2026-06-16 10:54:45] [INFO] [train_scratch] Epoch [25/90]
+[2026-06-16 10:55:06] [INFO] [train_scratch]   Train -> Loss: 0.4109, Acc(approx): 81.52%
+[2026-06-16 10:55:09] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2821, Acc: 88.00%
+[2026-06-16 10:55:09] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1537, dog=963
+[2026-06-16 10:55:11] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1880, Acc: 95.96%
+[2026-06-16 10:55:11] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1296, dog=1204
+[2026-06-16 10:55:14] [INFO] [train_scratch]   *** New best accuracy: 95.96% ***
+[2026-06-16 10:55:14] [INFO] [train_scratch] Epoch [26/90]
+[2026-06-16 10:55:36] [INFO] [train_scratch]   Train -> Loss: 0.4062, Acc(approx): 83.24%
+[2026-06-16 10:55:38] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1812, Acc: 94.40%
+[2026-06-16 10:55:38] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1309, dog=1191
+[2026-06-16 10:55:41] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1792, Acc: 96.44%
+[2026-06-16 10:55:41] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1276, dog=1224
+[2026-06-16 10:55:44] [INFO] [train_scratch]   *** New best accuracy: 96.44% ***
+[2026-06-16 10:55:44] [INFO] [train_scratch] Epoch [27/90]
+[2026-06-16 10:56:06] [INFO] [train_scratch]   Train -> Loss: 0.3967, Acc(approx): 82.51%
+[2026-06-16 10:56:08] [INFO] [train_scratch]   Val(raw) -> Loss: 0.3248, Acc: 85.72%
+[2026-06-16 10:56:08] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1612, dog=888
+[2026-06-16 10:56:11] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1704, Acc: 96.32%
+[2026-06-16 10:56:11] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1275, dog=1225
+[2026-06-16 10:56:12] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 10:56:12] [INFO] [train_scratch] Epoch [28/90]
+[2026-06-16 10:56:33] [INFO] [train_scratch]   Train -> Loss: 0.3927, Acc(approx): 84.11%
+[2026-06-16 10:56:36] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2157, Acc: 91.96%
+[2026-06-16 10:56:36] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1110, dog=1390
+[2026-06-16 10:56:38] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1646, Acc: 96.36%
+[2026-06-16 10:56:38] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1270, dog=1230
+[2026-06-16 10:56:39] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 10:56:39] [INFO] [train_scratch] Epoch [29/90]
+[2026-06-16 10:57:01] [INFO] [train_scratch]   Train -> Loss: 0.4122, Acc(approx): 82.76%
+[2026-06-16 10:57:04] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2626, Acc: 90.92%
+[2026-06-16 10:57:04] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1080, dog=1420
+[2026-06-16 10:57:06] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1590, Acc: 96.52%
+[2026-06-16 10:57:06] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1276, dog=1224
+[2026-06-16 10:57:09] [INFO] [train_scratch]   *** New best accuracy: 96.52% ***
+[2026-06-16 10:57:09] [INFO] [train_scratch] Epoch [30/90]
+[2026-06-16 10:57:31] [INFO] [train_scratch]   Train -> Loss: 0.4120, Acc(approx): 81.16%
+[2026-06-16 10:57:34] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2557, Acc: 92.56%
+[2026-06-16 10:57:34] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1405, dog=1095
+[2026-06-16 10:57:36] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1573, Acc: 96.72%
+[2026-06-16 10:57:36] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1271, dog=1229
+[2026-06-16 10:57:39] [INFO] [train_scratch]   *** New best accuracy: 96.72% ***
+[2026-06-16 10:57:39] [INFO] [train_scratch] Epoch [31/90]
+[2026-06-16 10:58:01] [INFO] [train_scratch]   Train -> Loss: 0.3976, Acc(approx): 85.29%
+[2026-06-16 10:58:04] [INFO] [train_scratch]   Val(raw) -> Loss: 0.4129, Acc: 81.84%
+[2026-06-16 10:58:04] [INFO] [train_scratch]   Val(raw) PredDist -> cat=865, dog=1635
+[2026-06-16 10:58:06] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1519, Acc: 96.76%
+[2026-06-16 10:58:06] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1268, dog=1232
+[2026-06-16 10:58:08] [INFO] [train_scratch]   *** New best accuracy: 96.76% ***
+[2026-06-16 10:58:08] [INFO] [train_scratch] Epoch [32/90]
+[2026-06-16 10:58:30] [INFO] [train_scratch]   Train -> Loss: 0.3920, Acc(approx): 84.34%
+[2026-06-16 10:58:33] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2261, Acc: 92.72%
+[2026-06-16 10:58:33] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1329, dog=1171
+[2026-06-16 10:58:35] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1506, Acc: 96.76%
+[2026-06-16 10:58:35] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1252, dog=1248
+[2026-06-16 10:58:36] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 10:58:36] [INFO] [train_scratch] Epoch [33/90]
+[2026-06-16 10:58:58] [INFO] [train_scratch]   Train -> Loss: 0.3969, Acc(approx): 84.05%
+[2026-06-16 10:59:01] [INFO] [train_scratch]   Val(raw) -> Loss: 0.3585, Acc: 83.72%
+[2026-06-16 10:59:01] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1662, dog=838
+[2026-06-16 10:59:03] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1466, Acc: 97.00%
+[2026-06-16 10:59:03] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1268, dog=1232
+[2026-06-16 10:59:06] [INFO] [train_scratch]   *** New best accuracy: 97.00% ***
+[2026-06-16 10:59:06] [INFO] [train_scratch] Epoch [34/90]
+[2026-06-16 10:59:28] [INFO] [train_scratch]   Train -> Loss: 0.4107, Acc(approx): 83.68%
+[2026-06-16 10:59:31] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1783, Acc: 94.40%
+[2026-06-16 10:59:31] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1181, dog=1319
+[2026-06-16 10:59:33] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1464, Acc: 97.12%
+[2026-06-16 10:59:33] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1263, dog=1237
+[2026-06-16 10:59:36] [INFO] [train_scratch]   *** New best accuracy: 97.12% ***
+[2026-06-16 10:59:36] [INFO] [train_scratch] Epoch [35/90]
+[2026-06-16 10:59:58] [INFO] [train_scratch]   Train -> Loss: 0.3969, Acc(approx): 83.88%
+[2026-06-16 11:00:00] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2563, Acc: 90.48%
+[2026-06-16 11:00:00] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1453, dog=1047
+[2026-06-16 11:00:03] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1433, Acc: 97.16%
+[2026-06-16 11:00:03] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1254, dog=1246
+[2026-06-16 11:00:06] [INFO] [train_scratch]   *** New best accuracy: 97.16% ***
+[2026-06-16 11:00:06] [INFO] [train_scratch] Epoch [36/90]
+[2026-06-16 11:00:28] [INFO] [train_scratch]   Train -> Loss: 0.3856, Acc(approx): 83.77%
+[2026-06-16 11:00:30] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2000, Acc: 94.72%
+[2026-06-16 11:00:30] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1255, dog=1245
+[2026-06-16 11:00:33] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1402, Acc: 97.28%
+[2026-06-16 11:00:33] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1249, dog=1251
+[2026-06-16 11:00:35] [INFO] [train_scratch]   *** New best accuracy: 97.28% ***
+[2026-06-16 11:00:35] [INFO] [train_scratch] Epoch [37/90]
+[2026-06-16 11:00:58] [INFO] [train_scratch]   Train -> Loss: 0.3839, Acc(approx): 84.83%
+[2026-06-16 11:01:01] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1644, Acc: 94.88%
+[2026-06-16 11:01:01] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1251, dog=1249
+[2026-06-16 11:01:03] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1374, Acc: 97.28%
+[2026-06-16 11:01:03] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1243, dog=1257
+[2026-06-16 11:01:04] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 11:01:04] [INFO] [train_scratch] Epoch [38/90]
+[2026-06-16 11:01:26] [INFO] [train_scratch]   Train -> Loss: 0.3722, Acc(approx): 85.65%
+[2026-06-16 11:01:29] [INFO] [train_scratch]   Val(raw) -> Loss: 0.3609, Acc: 84.88%
+[2026-06-16 11:01:29] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1631, dog=869
+[2026-06-16 11:01:31] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1324, Acc: 97.28%
+[2026-06-16 11:01:31] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1253, dog=1247
+[2026-06-16 11:01:32] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 11:01:32] [INFO] [train_scratch] Epoch [39/90]
+[2026-06-16 11:01:54] [INFO] [train_scratch]   Train -> Loss: 0.3662, Acc(approx): 88.70%
+[2026-06-16 11:01:56] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1887, Acc: 93.44%
+[2026-06-16 11:01:56] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1395, dog=1105
+[2026-06-16 11:01:59] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1305, Acc: 97.32%
+[2026-06-16 11:01:59] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1258, dog=1242
+[2026-06-16 11:02:02] [INFO] [train_scratch]   *** New best accuracy: 97.32% ***
+[2026-06-16 11:02:02] [INFO] [train_scratch] Epoch [40/90]
+[2026-06-16 11:02:23] [INFO] [train_scratch]   Train -> Loss: 0.3666, Acc(approx): 83.88%
+[2026-06-16 11:02:26] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2239, Acc: 94.16%
+[2026-06-16 11:02:26] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1259, dog=1241
+[2026-06-16 11:02:28] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1282, Acc: 97.52%
+[2026-06-16 11:02:28] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1253, dog=1247
+[2026-06-16 11:02:31] [INFO] [train_scratch]   *** New best accuracy: 97.52% ***
+[2026-06-16 11:02:31] [INFO] [train_scratch] Epoch [41/90]
+[2026-06-16 11:02:53] [INFO] [train_scratch]   Train -> Loss: 0.3920, Acc(approx): 86.39%
+[2026-06-16 11:02:56] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2265, Acc: 92.92%
+[2026-06-16 11:02:56] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1388, dog=1112
+[2026-06-16 11:02:58] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1306, Acc: 97.72%
+[2026-06-16 11:02:58] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1258, dog=1242
+[2026-06-16 11:03:01] [INFO] [train_scratch]   *** New best accuracy: 97.72% ***
+[2026-06-16 11:03:01] [INFO] [train_scratch] Epoch [42/90]
+[2026-06-16 11:03:23] [INFO] [train_scratch]   Train -> Loss: 0.3897, Acc(approx): 84.86%
+[2026-06-16 11:03:26] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1629, Acc: 96.28%
+[2026-06-16 11:03:26] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1306, dog=1194
+[2026-06-16 11:03:28] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1312, Acc: 97.80%
+[2026-06-16 11:03:28] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1258, dog=1242
+[2026-06-16 11:03:31] [INFO] [train_scratch]   *** New best accuracy: 97.80% ***
+[2026-06-16 11:03:31] [INFO] [train_scratch] Epoch [43/90]
+[2026-06-16 11:03:53] [INFO] [train_scratch]   Train -> Loss: 0.3865, Acc(approx): 84.19%
+[2026-06-16 11:03:55] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1715, Acc: 95.04%
+[2026-06-16 11:03:55] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1363, dog=1137
+[2026-06-16 11:03:58] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1309, Acc: 97.88%
+[2026-06-16 11:03:58] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1262, dog=1238
+[2026-06-16 11:04:01] [INFO] [train_scratch]   *** New best accuracy: 97.88% ***
+[2026-06-16 11:04:01] [INFO] [train_scratch] Epoch [44/90]
+[2026-06-16 11:04:23] [INFO] [train_scratch]   Train -> Loss: 0.3781, Acc(approx): 85.61%
+[2026-06-16 11:04:25] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1617, Acc: 95.60%
+[2026-06-16 11:04:25] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1261, dog=1239
+[2026-06-16 11:04:28] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1312, Acc: 97.64%
+[2026-06-16 11:04:28] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1262, dog=1238
+[2026-06-16 11:04:29] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 11:04:29] [INFO] [train_scratch] Epoch [45/90]
+[2026-06-16 11:04:51] [INFO] [train_scratch]   Train -> Loss: 0.3845, Acc(approx): 86.89%
+[2026-06-16 11:04:54] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1560, Acc: 95.92%
+[2026-06-16 11:04:54] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1263, dog=1237
+[2026-06-16 11:04:56] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1309, Acc: 97.64%
+[2026-06-16 11:04:56] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1262, dog=1238
+[2026-06-16 11:04:57] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 11:04:57] [INFO] [train_scratch] Epoch [46/90]
+[2026-06-16 11:05:19] [INFO] [train_scratch]   Train -> Loss: 0.3696, Acc(approx): 84.00%
+[2026-06-16 11:05:21] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2163, Acc: 93.24%
+[2026-06-16 11:05:21] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1400, dog=1100
+[2026-06-16 11:05:24] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1278, Acc: 97.52%
+[2026-06-16 11:05:24] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1253, dog=1247
+[2026-06-16 11:05:25] [INFO] [train_scratch]   EarlyStop patience: 3/15
+[2026-06-16 11:05:25] [INFO] [train_scratch] Epoch [47/90]
+[2026-06-16 11:05:47] [INFO] [train_scratch]   Train -> Loss: 0.3723, Acc(approx): 81.99%
+[2026-06-16 11:05:49] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1854, Acc: 94.12%
+[2026-06-16 11:05:49] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1190, dog=1310
+[2026-06-16 11:05:52] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1263, Acc: 97.72%
+[2026-06-16 11:05:52] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1252, dog=1248
+[2026-06-16 11:05:53] [INFO] [train_scratch]   EarlyStop patience: 4/15
+[2026-06-16 11:05:53] [INFO] [train_scratch] Epoch [48/90]
+[2026-06-16 11:06:15] [INFO] [train_scratch]   Train -> Loss: 0.3765, Acc(approx): 85.58%
+[2026-06-16 11:06:17] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2126, Acc: 93.80%
+[2026-06-16 11:06:17] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1390, dog=1110
+[2026-06-16 11:06:20] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1267, Acc: 97.64%
+[2026-06-16 11:06:20] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1258, dog=1242
+[2026-06-16 11:06:21] [INFO] [train_scratch]   EarlyStop patience: 5/15
+[2026-06-16 11:06:21] [INFO] [train_scratch] Epoch [49/90]
+[2026-06-16 11:06:43] [INFO] [train_scratch]   Train -> Loss: 0.3630, Acc(approx): 84.47%
+[2026-06-16 11:06:46] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2161, Acc: 94.08%
+[2026-06-16 11:06:46] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1379, dog=1121
+[2026-06-16 11:06:48] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1246, Acc: 97.64%
+[2026-06-16 11:06:48] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1252, dog=1248
+[2026-06-16 11:06:49] [INFO] [train_scratch]   EarlyStop patience: 6/15
+[2026-06-16 11:06:49] [INFO] [train_scratch] Epoch [50/90]
+[2026-06-16 11:07:11] [INFO] [train_scratch]   Train -> Loss: 0.3810, Acc(approx): 86.15%
+[2026-06-16 11:07:14] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2534, Acc: 90.76%
+[2026-06-16 11:07:14] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1038, dog=1462
+[2026-06-16 11:07:16] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1267, Acc: 97.64%
+[2026-06-16 11:07:16] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1254, dog=1246
+[2026-06-16 11:07:17] [INFO] [train_scratch]   EarlyStop patience: 7/15
+[2026-06-16 11:07:17] [INFO] [train_scratch] Epoch [51/90]
+[2026-06-16 11:07:40] [INFO] [train_scratch]   Train -> Loss: 0.3512, Acc(approx): 87.40%
+[2026-06-16 11:07:42] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1698, Acc: 95.56%
+[2026-06-16 11:07:42] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1334, dog=1166
+[2026-06-16 11:07:45] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1226, Acc: 97.84%
+[2026-06-16 11:07:45] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1253, dog=1247
+[2026-06-16 11:07:46] [INFO] [train_scratch]   EarlyStop patience: 8/15
+[2026-06-16 11:07:46] [INFO] [train_scratch] Epoch [52/90]
+[2026-06-16 11:08:08] [INFO] [train_scratch]   Train -> Loss: 0.3544, Acc(approx): 88.98%
+[2026-06-16 11:08:11] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2213, Acc: 95.24%
+[2026-06-16 11:08:11] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1302, dog=1198
+[2026-06-16 11:08:13] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1235, Acc: 97.80%
+[2026-06-16 11:08:13] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1250, dog=1250
+[2026-06-16 11:08:14] [INFO] [train_scratch]   EarlyStop patience: 9/15
+[2026-06-16 11:08:14] [INFO] [train_scratch] Epoch [53/90]
+[2026-06-16 11:08:36] [INFO] [train_scratch]   Train -> Loss: 0.3544, Acc(approx): 85.36%
+[2026-06-16 11:08:39] [INFO] [train_scratch]   Val(raw) -> Loss: 0.3494, Acc: 84.64%
+[2026-06-16 11:08:39] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1635, dog=865
+[2026-06-16 11:08:41] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1210, Acc: 97.80%
+[2026-06-16 11:08:41] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1250, dog=1250
+[2026-06-16 11:08:42] [INFO] [train_scratch]   EarlyStop patience: 10/15
+[2026-06-16 11:08:42] [INFO] [train_scratch] Epoch [54/90]
+[2026-06-16 11:09:04] [INFO] [train_scratch]   Train -> Loss: 0.3591, Acc(approx): 84.38%
+[2026-06-16 11:09:06] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1535, Acc: 96.68%
+[2026-06-16 11:09:06] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1256, dog=1244
+[2026-06-16 11:09:09] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1218, Acc: 97.80%
+[2026-06-16 11:09:09] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1254, dog=1246
+[2026-06-16 11:09:10] [INFO] [train_scratch]   EarlyStop patience: 11/15
+[2026-06-16 11:09:10] [INFO] [train_scratch] Epoch [55/90]
+[2026-06-16 11:09:31] [INFO] [train_scratch]   Train -> Loss: 0.3552, Acc(approx): 84.75%
+[2026-06-16 11:09:34] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1549, Acc: 95.32%
+[2026-06-16 11:09:34] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1340, dog=1160
+[2026-06-16 11:09:36] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1209, Acc: 97.72%
+[2026-06-16 11:09:36] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1254, dog=1246
+[2026-06-16 11:09:37] [INFO] [train_scratch]   EarlyStop patience: 12/15
+[2026-06-16 11:09:37] [INFO] [train_scratch] Epoch [56/90]
+[2026-06-16 11:09:59] [INFO] [train_scratch]   Train -> Loss: 0.3438, Acc(approx): 86.77%
+[2026-06-16 11:10:02] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1375, Acc: 96.24%
+[2026-06-16 11:10:02] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1279, dog=1221
+[2026-06-16 11:10:04] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1172, Acc: 98.00%
+[2026-06-16 11:10:04] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1261, dog=1239
+[2026-06-16 11:10:07] [INFO] [train_scratch]   *** New best accuracy: 98.00% ***
+[2026-06-16 11:10:07] [INFO] [train_scratch] Epoch [57/90]
+[2026-06-16 11:10:29] [INFO] [train_scratch]   Train -> Loss: 0.3454, Acc(approx): 85.42%
+[2026-06-16 11:10:31] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1765, Acc: 95.00%
+[2026-06-16 11:10:31] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1346, dog=1154
+[2026-06-16 11:10:33] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1159, Acc: 98.12%
+[2026-06-16 11:10:33] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1252, dog=1248
+[2026-06-16 11:10:36] [INFO] [train_scratch]   *** New best accuracy: 98.12% ***
+[2026-06-16 11:10:36] [INFO] [train_scratch] Epoch [58/90]
+[2026-06-16 11:10:58] [INFO] [train_scratch]   Train -> Loss: 0.3463, Acc(approx): 86.85%
+[2026-06-16 11:11:00] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1677, Acc: 96.04%
+[2026-06-16 11:11:00] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1328, dog=1172
+[2026-06-16 11:11:03] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1164, Acc: 98.12%
+[2026-06-16 11:11:03] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1262, dog=1238
+[2026-06-16 11:11:04] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 11:11:04] [INFO] [train_scratch] Epoch [59/90]
+[2026-06-16 11:11:26] [INFO] [train_scratch]   Train -> Loss: 0.2899, Acc(approx): 91.68%
+[2026-06-16 11:11:28] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1427, Acc: 96.64%
+[2026-06-16 11:11:28] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1289, dog=1211
+[2026-06-16 11:11:31] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1100, Acc: 98.32%
+[2026-06-16 11:11:31] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1259, dog=1241
+[2026-06-16 11:11:34] [INFO] [train_scratch]   *** New best accuracy: 98.32% ***
+[2026-06-16 11:11:34] [INFO] [train_scratch] Epoch [60/90]
+[2026-06-16 11:11:56] [INFO] [train_scratch]   Train -> Loss: 0.3312, Acc(approx): 87.64%
+[2026-06-16 11:11:58] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1390, Acc: 95.96%
+[2026-06-16 11:11:58] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1340, dog=1160
+[2026-06-16 11:12:01] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1110, Acc: 98.28%
+[2026-06-16 11:12:01] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1262, dog=1238
+[2026-06-16 11:12:02] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 11:12:02] [INFO] [train_scratch] Epoch [61/90]
+[2026-06-16 11:12:23] [INFO] [train_scratch]   Train -> Loss: 0.3765, Acc(approx): 86.16%
+[2026-06-16 11:12:26] [INFO] [train_scratch]   Val(raw) -> Loss: 0.2171, Acc: 93.76%
+[2026-06-16 11:12:26] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1409, dog=1091
+[2026-06-16 11:12:28] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1169, Acc: 98.04%
+[2026-06-16 11:12:28] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1262, dog=1238
+[2026-06-16 11:12:29] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 11:12:29] [INFO] [train_scratch] Epoch [62/90]
+[2026-06-16 11:12:51] [INFO] [train_scratch]   Train -> Loss: 0.3376, Acc(approx): 86.54%
+[2026-06-16 11:12:53] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1544, Acc: 95.48%
+[2026-06-16 11:12:53] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1350, dog=1150
+[2026-06-16 11:12:56] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1163, Acc: 98.20%
+[2026-06-16 11:12:56] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1260, dog=1240
+[2026-06-16 11:12:56] [INFO] [train_scratch]   EarlyStop patience: 3/15
+[2026-06-16 11:12:56] [INFO] [train_scratch] Epoch [63/90]
+[2026-06-16 11:13:18] [INFO] [train_scratch]   Train -> Loss: 0.3471, Acc(approx): 87.11%
+[2026-06-16 11:13:20] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1017, Acc: 98.04%
+[2026-06-16 11:13:20] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1270, dog=1230
+[2026-06-16 11:13:23] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1161, Acc: 98.36%
+[2026-06-16 11:13:23] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1268, dog=1232
+[2026-06-16 11:13:26] [INFO] [train_scratch]   *** New best accuracy: 98.36% ***
+[2026-06-16 11:13:26] [INFO] [train_scratch] Epoch [64/90]
+[2026-06-16 11:13:47] [INFO] [train_scratch]   Train -> Loss: 0.3474, Acc(approx): 86.14%
+[2026-06-16 11:13:50] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1393, Acc: 97.12%
+[2026-06-16 11:13:50] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1253, dog=1247
+[2026-06-16 11:13:52] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1166, Acc: 98.56%
+[2026-06-16 11:13:52] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1261, dog=1239
+[2026-06-16 11:13:55] [INFO] [train_scratch]   *** New best accuracy: 98.56% ***
+[2026-06-16 11:13:55] [INFO] [train_scratch] Epoch [65/90]
+[2026-06-16 11:14:17] [INFO] [train_scratch]   Train -> Loss: 0.3409, Acc(approx): 86.31%
+[2026-06-16 11:14:19] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1273, Acc: 97.12%
+[2026-06-16 11:14:19] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1279, dog=1221
+[2026-06-16 11:14:22] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1147, Acc: 98.40%
+[2026-06-16 11:14:22] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1257, dog=1243
+[2026-06-16 11:14:23] [INFO] [train_scratch]   EarlyStop patience: 1/15
+[2026-06-16 11:14:23] [INFO] [train_scratch] Epoch [66/90]
+[2026-06-16 11:14:45] [INFO] [train_scratch]   Train -> Loss: 0.3266, Acc(approx): 86.26%
+[2026-06-16 11:14:47] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1466, Acc: 96.88%
+[2026-06-16 11:14:47] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1293, dog=1207
+[2026-06-16 11:14:50] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1147, Acc: 98.28%
+[2026-06-16 11:14:50] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1254, dog=1246
+[2026-06-16 11:14:51] [INFO] [train_scratch]   EarlyStop patience: 2/15
+[2026-06-16 11:14:51] [INFO] [train_scratch] Epoch [67/90]
+[2026-06-16 11:15:13] [INFO] [train_scratch]   Train -> Loss: 0.3339, Acc(approx): 86.80%
+[2026-06-16 11:15:15] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1570, Acc: 96.88%
+[2026-06-16 11:15:15] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1235, dog=1265
+[2026-06-16 11:15:18] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1145, Acc: 98.28%
+[2026-06-16 11:15:18] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1258, dog=1242
+[2026-06-16 11:15:19] [INFO] [train_scratch]   EarlyStop patience: 3/15
+[2026-06-16 11:15:19] [INFO] [train_scratch] Epoch [68/90]
+[2026-06-16 11:15:41] [INFO] [train_scratch]   Train -> Loss: 0.3168, Acc(approx): 87.45%
+[2026-06-16 11:15:44] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1288, Acc: 97.96%
+[2026-06-16 11:15:44] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1256, dog=1244
+[2026-06-16 11:15:46] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1120, Acc: 98.28%
+[2026-06-16 11:15:46] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1254, dog=1246
+[2026-06-16 11:15:47] [INFO] [train_scratch]   EarlyStop patience: 4/15
+[2026-06-16 11:15:47] [INFO] [train_scratch] Epoch [69/90]
+[2026-06-16 11:16:10] [INFO] [train_scratch]   Train -> Loss: 0.3332, Acc(approx): 85.31%
+[2026-06-16 11:16:12] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1329, Acc: 97.72%
+[2026-06-16 11:16:12] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1276, dog=1224
+[2026-06-16 11:16:15] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1131, Acc: 98.36%
+[2026-06-16 11:16:15] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1254, dog=1246
+[2026-06-16 11:16:16] [INFO] [train_scratch]   EarlyStop patience: 5/15
+[2026-06-16 11:16:16] [INFO] [train_scratch] Epoch [70/90]
+[2026-06-16 11:16:38] [INFO] [train_scratch]   Train -> Loss: 0.3493, Acc(approx): 88.67%
+[2026-06-16 11:16:40] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1459, Acc: 97.32%
+[2026-06-16 11:16:40] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1302, dog=1198
+[2026-06-16 11:16:43] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1155, Acc: 98.44%
+[2026-06-16 11:16:43] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1260, dog=1240
+[2026-06-16 11:16:44] [INFO] [train_scratch]   EarlyStop patience: 6/15
+[2026-06-16 11:16:44] [INFO] [train_scratch] Epoch [71/90]
+[2026-06-16 11:17:06] [INFO] [train_scratch]   Train -> Loss: 0.3194, Acc(approx): 87.43%
+[2026-06-16 11:17:09] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1219, Acc: 97.40%
+[2026-06-16 11:17:09] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1300, dog=1200
+[2026-06-16 11:17:11] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1147, Acc: 98.32%
+[2026-06-16 11:17:11] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1257, dog=1243
+[2026-06-16 11:17:12] [INFO] [train_scratch]   EarlyStop patience: 7/15
+[2026-06-16 11:17:12] [INFO] [train_scratch] Epoch [72/90]
+[2026-06-16 11:17:33] [INFO] [train_scratch]   Train -> Loss: 0.3484, Acc(approx): 84.12%
+[2026-06-16 11:17:36] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1456, Acc: 96.96%
+[2026-06-16 11:17:36] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1305, dog=1195
+[2026-06-16 11:17:38] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1158, Acc: 98.24%
+[2026-06-16 11:17:38] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1255, dog=1245
+[2026-06-16 11:17:39] [INFO] [train_scratch]   EarlyStop patience: 8/15
+[2026-06-16 11:17:39] [INFO] [train_scratch] Epoch [73/90]
+[2026-06-16 11:18:01] [INFO] [train_scratch]   Train -> Loss: 0.3211, Acc(approx): 89.38%
+[2026-06-16 11:18:04] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1426, Acc: 97.28%
+[2026-06-16 11:18:04] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1223, dog=1277
+[2026-06-16 11:18:06] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1139, Acc: 98.36%
+[2026-06-16 11:18:06] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1258, dog=1242
+[2026-06-16 11:18:07] [INFO] [train_scratch]   EarlyStop patience: 9/15
+[2026-06-16 11:18:07] [INFO] [train_scratch] Epoch [74/90]
+[2026-06-16 11:18:30] [INFO] [train_scratch]   Train -> Loss: 0.3126, Acc(approx): 88.26%
+[2026-06-16 11:18:32] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1235, Acc: 98.28%
+[2026-06-16 11:18:32] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1274, dog=1226
+[2026-06-16 11:18:35] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1120, Acc: 98.28%
+[2026-06-16 11:18:35] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1254, dog=1246
+[2026-06-16 11:18:36] [INFO] [train_scratch]   EarlyStop patience: 10/15
+[2026-06-16 11:18:36] [INFO] [train_scratch] Epoch [75/90]
+[2026-06-16 11:18:58] [INFO] [train_scratch]   Train -> Loss: 0.2927, Acc(approx): 90.31%
+[2026-06-16 11:19:01] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1145, Acc: 98.04%
+[2026-06-16 11:19:01] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1290, dog=1210
+[2026-06-16 11:19:03] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1083, Acc: 98.48%
+[2026-06-16 11:19:03] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1255, dog=1245
+[2026-06-16 11:19:04] [INFO] [train_scratch]   EarlyStop patience: 11/15
+[2026-06-16 11:19:04] [INFO] [train_scratch] Epoch [76/90]
+[2026-06-16 11:19:27] [INFO] [train_scratch]   Train -> Loss: 0.3089, Acc(approx): 85.87%
+[2026-06-16 11:19:29] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1054, Acc: 98.36%
+[2026-06-16 11:19:29] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1260, dog=1240
+[2026-06-16 11:19:32] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1086, Acc: 98.48%
+[2026-06-16 11:19:32] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1255, dog=1245
+[2026-06-16 11:19:33] [INFO] [train_scratch]   EarlyStop patience: 12/15
+[2026-06-16 11:19:33] [INFO] [train_scratch] Epoch [77/90]
+[2026-06-16 11:19:55] [INFO] [train_scratch]   Train -> Loss: 0.3228, Acc(approx): 89.13%
+[2026-06-16 11:19:58] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1190, Acc: 98.20%
+[2026-06-16 11:19:58] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1276, dog=1224
+[2026-06-16 11:20:01] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1086, Acc: 98.56%
+[2026-06-16 11:20:01] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1259, dog=1241
+[2026-06-16 11:20:02] [INFO] [train_scratch]   EarlyStop patience: 13/15
+[2026-06-16 11:20:02] [INFO] [train_scratch] Epoch [78/90]
+[2026-06-16 11:20:25] [INFO] [train_scratch]   Train -> Loss: 0.3113, Acc(approx): 87.74%
+[2026-06-16 11:20:27] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1057, Acc: 98.16%
+[2026-06-16 11:20:27] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1257, dog=1243
+[2026-06-16 11:20:30] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1098, Acc: 98.44%
+[2026-06-16 11:20:30] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1258, dog=1242
+[2026-06-16 11:20:31] [INFO] [train_scratch]   EarlyStop patience: 14/15
+[2026-06-16 11:20:31] [INFO] [train_scratch] Epoch [79/90]
+[2026-06-16 11:20:53] [INFO] [train_scratch]   Train -> Loss: 0.3005, Acc(approx): 88.72%
+[2026-06-16 11:20:56] [INFO] [train_scratch]   Val(raw) -> Loss: 0.1204, Acc: 97.92%
+[2026-06-16 11:20:56] [INFO] [train_scratch]   Val(raw) PredDist -> cat=1285, dog=1215
+[2026-06-16 11:20:59] [INFO] [train_scratch]   Val(EMA) -> Loss: 0.1077, Acc: 98.52%
+[2026-06-16 11:20:59] [INFO] [train_scratch]   Val(EMA) PredDist -> cat=1258, dog=1242
+[2026-06-16 11:21:00] [INFO] [train_scratch]   EarlyStop patience: 15/15
+[2026-06-16 11:21:00] [INFO] [train_scratch] Early stopping triggered at epoch 79
+[2026-06-16 11:21:00] [INFO] [train_scratch] Scratch training finished. Best validation accuracy: 98.56%
+[2026-06-16 11:21:00] [INFO] [train_scratch] ==================================================
