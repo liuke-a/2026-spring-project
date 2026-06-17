@@ -29,11 +29,18 @@ class CatDogClassifier(nn.Module):
         super().__init__()
 
         # 加载预训练 Backbone
-        weights = models.ResNet18_Weights.IMAGENET1K_V1 if pretrained else None
-        self.backbone = models.resnet18(weights=weights)
+        # weights = models.ResNet18_Weights.IMAGENET1K_V1 if pretrained else None
+        # self.backbone = models.resnet18(weights=weights)
+        
+        # 改 1：ResNet50
+        weights = models.ResNet50_Weights.IMAGENET1K_V2 if pretrained else None
+        self.backbone = models.resnet50(weights=weights)
 
         # 获取原 FC 层输入维度（512 for ResNet18）
-        in_features = self.backbone.fc.in_features
+        # in_features = self.backbone.fc.in_features
+
+        # 改 2：ResNet50 的 fc.in_features 是 2048
+        in_features = self.backbone.fc.in_features  # 2048
 
         # 替换原 FC 为 Identity（仅特征提取），后续接自定义 Head
         self.backbone.fc = nn.Identity()
@@ -42,7 +49,7 @@ class CatDogClassifier(nn.Module):
         self.head = nn.Linear(in_features, num_classes)
 
         logger.info(
-            f"Model initialized: ResNet18 backbone (pretrained={pretrained}), "
+            f"Model initialized: ResNet50 backbone (pretrained={pretrained}), "
             f"head: {in_features} -> {num_classes}"
         )
 

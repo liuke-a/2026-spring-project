@@ -5,39 +5,6 @@
 > **数据规模**：13,000 张原始图像 (Train/Val/Test = 8:1:1)
 > **技术栈**：Python 3.8+, PyTorch 2.x, TensorRT 8.6+, Git
 
-<!-- 
-## 📅 项目进度甘特图 (Gantt Chart)
-
-```mermaid
-gantt
-    title 猫狗图片分类实训项目进度规划
-    dateFormat  YYYY-MM-DD
-    axisFormat  %m-%d
-    
-    section 阶段一：工程初始化
-    环境配置与Git规范      :a1, 2026-06-15, 1d
-    目录结构与日志预埋     :a2, after a1, 0.5d
-
-    section 阶段二：数据工程
-    数据清洗与EDA探索      :b1, 2026-06-16, 1d
-    维度统一与增强策略     :b2, after b1, 1d
-
-    section 阶段三：模型设计
-    基线模型选型与定制     :c1, 2026-06-18, 1d
-
-    section 阶段四：训练与优化
-    基础训练循环搭建       :d1, 2026-06-19, 1d
-    AMP混合精度与超参调优  :d2, after d1, 1.5d
-
-    section 阶段五：评估与加速
-    多维度评估与混淆矩阵   :e1, 2026-06-21, 1d
-    TensorRT推理加速验证   :e2, after e1, 1d
-
-    section 阶段六：工程交付
-    代码Review与文档撰写   :f1, 2026-06-23, 1.5d
-    最终Git提交与报告整理  :f2, after f1, 1d
-```
-*(注：以上日期为示例，请根据您的实际实训周期在编辑器中修改)* -->
 
 ---
 
