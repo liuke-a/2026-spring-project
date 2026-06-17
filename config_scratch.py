@@ -1,9 +1,7 @@
 """
 从头训练（SE-ResNet）专用配置 — RTX 3080Ti 12GB 优化版。
 
-复用 config.py 的路径、图像尺寸与归一化常量，仅定义从头训练所需的
-超参数与独立的 checkpoint / TensorBoard 子目录，避免与预训练迁移学习
-流程互相覆盖。
+包含所有基础路径、图像预处理参数与从头训练专用超参数。
 
 关键优化（3080Ti 12GB vs 原 6GB 配置）：
 - BATCH_SIZE 64→256，充分利用大显存与 GPU 并行度
@@ -12,20 +10,35 @@
 - 增强数据增强强度（RandAugment + Mixup）
 """
 
-from config import (  # noqa: F401  复用基础常量
-    PROJECT_ROOT,
-    DATA_DIR,
-    TRAIN_DIR,
-    TEST_DIR,
-    LOG_DIR,
-    IMAGE_SIZE,
-    IMAGENET_MEAN,
-    IMAGENET_STD,
-    VAL_RATIO,
-    RANDOM_SEED,
-    MAX_SAMPLES,
-    DEVICE,
-)
+from pathlib import Path
+
+import torch
+
+# ==================== 基础路径 ====================
+PROJECT_ROOT = Path(__file__).parent.resolve()
+DATA_DIR = PROJECT_ROOT / "data"
+TRAIN_DIR = DATA_DIR / "train"
+TEST_DIR = DATA_DIR / "test"
+LOG_DIR = PROJECT_ROOT / "logs"
+LOG_FORMAT: str = "[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s"
+LOG_DATE_FORMAT: str = "%Y-%m-%d %H:%M:%S"
+LOG_FILE = LOG_DIR / "train.log"
+
+for _d in (LOG_DIR,):
+    _d.mkdir(parents=True, exist_ok=True)
+
+# ==================== 图像预处理 ====================
+IMAGE_SIZE: int = 224
+IMAGENET_MEAN: tuple = (0.485, 0.456, 0.406)
+IMAGENET_STD: tuple = (0.229, 0.224, 0.225)
+
+# ==================== 数据集 ====================
+VAL_RATIO: float = 0.1
+RANDOM_SEED: int = 42
+MAX_SAMPLES: int | None = None
+
+# ==================== 设备 ====================
+DEVICE: str = "cuda" if torch.cuda.is_available() else "cpu"
 
 # ==================== 模型结构 ====================
 # (2,2,2,2)=SE-ResNet18，(3,4,6,3)=SE-ResNet34
@@ -36,7 +49,6 @@ DROP_RATE: float = 0.2          # 分类头前 Dropout
 DROP_PATH: float = 0.05         # 随机深度最大概率（沿深度线性递增）
 
 # ==================== 数据加载 ====================
-# 覆盖 config.py 的默认值（仅 scratch 训练生效，不影响迁移学习）
 NUM_WORKERS: int = 8             # 3080Ti 12GB：8 worker 保证数据供给，无瓶颈
 
 # ==================== 训练超参数（针对 RTX 3080Ti 12GB 优化） ====================

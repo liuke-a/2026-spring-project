@@ -18,7 +18,7 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 import torchvision.transforms as T
 
-from config import (
+from config_scratch import (
     TRAIN_DIR, IMAGE_SIZE, IMAGENET_MEAN, IMAGENET_STD,
     BATCH_SIZE, NUM_WORKERS, VAL_RATIO, RANDOM_SEED, MAX_SAMPLES
 )

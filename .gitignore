@@ -1,22 +1,42 @@
-# Data & large files
-data/
-
-# Logs & generated outputs
-logs/
-checkpoints/
-
 # Python
 __pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+.env
 
-# Model checkpoints & serialized files
-*.pth
-*.pt
-
-# IDE
+# 编辑器
 .vscode/
+.idea/
+*.swp
 .cursor/
 .trae
 
+# 数据与模型（大文件，不进 Git）
+data/
+checkpoints/
+logs/
+*.pth
+*.pt
+*.onnx
+*.trt
+*.engine
+*.plan
+
+# 输出文件
+submission.csv
+*.csv
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# Office 文档
+*.doc
+*.docx
+
 # Claude local config
 CLAUDE.local.md
-
+CLAUDE.md
+tmp/
