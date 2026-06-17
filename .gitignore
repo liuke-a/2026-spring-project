@@ -13,7 +13,7 @@ __pycache__/
 .cursor/
 .trae
 
-# 数据与模型（大文件，绝对不进 Git）
+# 数据与模型（大文件，不进 Git）
 data/
 checkpoints/
 logs/
