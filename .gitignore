@@ -32,6 +32,10 @@ submission.csv
 .DS_Store
 Thumbs.db
 
+# Office 文档
+*.doc
+*.docx
+
 # Claude local config
 CLAUDE.local.md
 CLAUDE.md
