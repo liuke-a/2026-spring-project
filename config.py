@@ -33,6 +33,7 @@ BATCH_SIZE: int = 32          # 6G 显存安全值，后续可试探 24
 NUM_WORKERS: int = 4            # Ubuntu 笔记本建议 4，CPU 吃紧可改 2
 VAL_RATIO: float = 0.1         # 从 train 目录划分 10% 做验证
 RANDOM_SEED: int = 42
+MAX_SAMPLES: int | None = None  # 设为整数可只加载前 N 张图，用于快速验证
 
 # 日志格式
 LOG_FORMAT: str = "[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s"

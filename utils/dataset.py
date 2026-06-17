@@ -9,6 +9,7 @@
 """
 
 import logging
+import random
 from pathlib import Path
 from typing import Tuple, Optional, Callable, List
 
@@ -19,7 +20,7 @@ import torchvision.transforms as T
 
 from config import (
     TRAIN_DIR, IMAGE_SIZE, IMAGENET_MEAN, IMAGENET_STD,
-    BATCH_SIZE, NUM_WORKERS, VAL_RATIO, RANDOM_SEED
+    BATCH_SIZE, NUM_WORKERS, VAL_RATIO, RANDOM_SEED, MAX_SAMPLES
 )
 
 logger = logging.getLogger(__name__)
@@ -43,19 +44,20 @@ class CatDogDataset(Dataset):
         self,
         root_dir: Path,
         transform: Optional[Callable] = None,
-        samples: Optional[List[Tuple[Path, int]]] = None
+        samples: Optional[List[Tuple[Path, int]]] = None,
+        max_samples: Optional[int] = None,
     ) -> None:
         self.root_dir = Path(root_dir)
         self.transform = transform
 
         if samples is None:
             self.samples: List[Tuple[Path, int]] = []
-            self._scan_directory()
+            self._scan_directory(max_samples)
         else:
-            self.samples = samples
+            self.samples = samples[:max_samples] if max_samples is not None else samples
             logger.info(f"Dataset loaded: {len(self.samples)} samples (from split list)")
 
-    def _scan_directory(self) -> None:
+    def _scan_directory(self, max_samples: Optional[int] = None) -> None:
         """扫描目录，解析标签，跳过非图片文件。"""
         if not self.root_dir.exists():
             raise FileNotFoundError(f"Data directory not found: {self.root_dir}")
@@ -63,7 +65,17 @@ class CatDogDataset(Dataset):
         valid_ext = {".jpg", ".jpeg", ".png", ".bmp", ".gif"}
         cat_count = dog_count = 0
 
-        for file_path in self.root_dir.iterdir():
+        # 全量加载时直接遍历，无额外开销；限制样本数时先打乱，保证类别均衡
+        if max_samples is None:
+            file_iter = self.root_dir.iterdir()
+        else:
+            file_iter = list(self.root_dir.iterdir())
+            random.shuffle(file_iter)
+
+        for file_path in file_iter:
+            if max_samples is not None and len(self.samples) >= max_samples:
+                break
+
             if file_path.is_dir() or file_path.suffix.lower() not in valid_ext:
                 continue
 
@@ -112,23 +124,47 @@ class CatDogDataset(Dataset):
         return image, label
 
 
-def get_transforms() -> Tuple[Callable, Callable]:
+def get_transforms(
+    strong: bool = False,
+    rand_augment: Tuple[int, int] = (2, 9),
+    erasing_prob: float = 0.25,
+) -> Tuple[Callable, Callable]:
     """
     构建训练集与验证集的图像变换。
 
-    训练集：RandomResizedCrop + RandomHorizontalFlip + ColorJitter
-    验证集：Resize + CenterCrop（保持比例，不引入随机性）
+    默认（strong=False）：用于 ImageNet 预训练迁移学习流程，行为保持不变。
+        训练集：RandomResizedCrop + RandomHorizontalFlip + RandomRotation + ColorJitter
+    强增强（strong=True）：用于从头训练（SE-ResNet），叠加更激进的增强：
+        RandomResizedCrop(scale 更宽) + HFlip + ColorJitter + RandAugment + RandomErasing
 
-    均使用 ImageNet 标准化参数，以适配后续预训练模型。
+    验证集两种情况一致：Resize + CenterCrop（保持比例，不引入随机性）。
+    均使用 ImageNet 标准化参数。
+
+    Args:
+        strong: 是否使用从头训练的强增强组合。
+        rand_augment: (num_ops, magnitude)，仅在 strong=True 时生效。
+        erasing_prob: RandomErasing 触发概率，仅在 strong=True 时生效。
     """
-    train_transform = T.Compose([
-        T.RandomResizedCrop(IMAGE_SIZE, scale=(0.8, 1.0)),
-        T.RandomHorizontalFlip(p=0.5),
-        T.RandomRotation(degrees=15),
-        T.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
-        T.ToTensor(),
-        T.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD),
-    ])
+    if strong:
+        n_ops, magnitude = rand_augment
+        train_transform = T.Compose([
+            T.RandomResizedCrop(IMAGE_SIZE, scale=(0.6, 1.0)),
+            T.RandomHorizontalFlip(p=0.5),
+            T.RandAugment(num_ops=n_ops, magnitude=magnitude),
+            T.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
+            T.ToTensor(),
+            T.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD),
+            T.RandomErasing(p=erasing_prob),
+        ])
+    else:
+        train_transform = T.Compose([
+            T.RandomResizedCrop(IMAGE_SIZE, scale=(0.8, 1.0)),
+            T.RandomHorizontalFlip(p=0.5),
+            T.RandomRotation(degrees=15),
+            T.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
+            T.ToTensor(),
+            T.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD),
+        ])
 
     val_transform = T.Compose([
         T.Resize(int(IMAGE_SIZE * 1.14)),  # 256 for 224
@@ -140,18 +176,40 @@ def get_transforms() -> Tuple[Callable, Callable]:
     return train_transform, val_transform
 
 
-def get_dataloaders() -> Tuple[DataLoader, DataLoader]:
+def get_dataloaders(
+    max_samples: Optional[int] = None,
+    strong: bool = False,
+    batch_size: Optional[int] = None,
+    num_workers: Optional[int] = None,
+    rand_augment: Tuple[int, int] = (2, 9),
+    erasing_prob: float = 0.25,
+    persistent_workers: bool = False,
+    prefetch_factor: int = 2,
+) -> Tuple[DataLoader, DataLoader]:
     """
     构建训练集与验证集的 DataLoader。
 
     从 TRAIN_DIR 加载全部数据，按 VAL_RATIO 随机划分为训练子集与验证子集。
     两个子集分别创建独立的 Dataset 实例，绑定不同的 transform。
 
+    Args:
+        max_samples: 限制加载样本总数，None 表示加载全部。用于快速验证。
+        strong: 是否对训练集使用从头训练的强增强组合（默认 False 保持原行为）。
+        batch_size: 覆盖默认 BATCH_SIZE（None 表示使用 config.BATCH_SIZE）。
+        num_workers: 覆盖默认 NUM_WORKERS（None 表示使用 config.NUM_WORKERS）。
+        rand_augment: 传递给强增强的 RandAugment (num_ops, magnitude)。
+        erasing_prob: 传递给强增强的 RandomErasing 概率。
+        persistent_workers: DataLoader 是否保持 worker 进程存活（避免 epoch 间 fork 开销）。
+        prefetch_factor: 每个 worker 预取的 batch 数（仅 num_workers>0 时生效）。
+
     Returns:
         (train_loader, val_loader)
     """
+    effective_batch = batch_size if batch_size is not None else BATCH_SIZE
+    effective_workers = num_workers if num_workers is not None else NUM_WORKERS
+
     # 先扫描完整数据集
-    full_dataset = CatDogDataset(root_dir=TRAIN_DIR, transform=None)
+    full_dataset = CatDogDataset(root_dir=TRAIN_DIR, transform=None, max_samples=max_samples)
     total = len(full_dataset)
 
     # 计算划分长度
@@ -171,7 +229,9 @@ def get_dataloaders() -> Tuple[DataLoader, DataLoader]:
     train_samples = [full_dataset.samples[i] for i in train_indices]
     val_samples = [full_dataset.samples[i] for i in val_indices]
 
-    train_transform, val_transform = get_transforms()
+    train_transform, val_transform = get_transforms(
+        strong=strong, rand_augment=rand_augment, erasing_prob=erasing_prob
+    )
 
     train_dataset = CatDogDataset(
         root_dir=TRAIN_DIR, transform=train_transform, samples=train_samples
@@ -182,19 +242,23 @@ def get_dataloaders() -> Tuple[DataLoader, DataLoader]:
 
     train_loader = DataLoader(
         train_dataset,
-        batch_size=BATCH_SIZE,
+        batch_size=effective_batch,
         shuffle=True,
-        num_workers=NUM_WORKERS,
+        num_workers=effective_workers,
         pin_memory=True,
         drop_last=True,
+        persistent_workers=persistent_workers,
+        prefetch_factor=prefetch_factor,
     )
 
     val_loader = DataLoader(
         val_dataset,
-        batch_size=BATCH_SIZE,
+        batch_size=effective_batch,
         shuffle=False,
-        num_workers=NUM_WORKERS,
+        num_workers=effective_workers,
         pin_memory=True,
+        persistent_workers=persistent_workers,
+        prefetch_factor=prefetch_factor,
     )
 
     return train_loader, val_loader
