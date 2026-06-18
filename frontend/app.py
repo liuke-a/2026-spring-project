@@ -2,10 +2,10 @@
 猫狗分类器 — Gradio 前端界面
 =============================
 
-基于 service 层的美观推理界面：
+基于 service 层的推理界面：
   - 文件选择、拖拽上传、剪贴板粘贴
   - 上传后自动预测
-  - 支持模型切换（SEResNet18 / SEResNet34）
+  - 支持模型切换（从 service 工厂动态读取可用模型）
   - 展示预测类别、猫狗置信度、推理耗时、模型名称
 
 Usage:
@@ -22,7 +22,14 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 import gradio as gr
 
-from service import get_model_service, LABEL_MAP
+from service import get_model_service, LABEL_MAP, get_available_models
+
+# ============================================================================
+# 可用模型列表 — 从 service 工厂动态获取，避免硬编码
+# ============================================================================
+_MODEL_CHOICES = [(m["label"], m["name"]) for m in get_available_models()]
+_MODEL_LABEL_MAP = {m["name"]: m["label"] for m in get_available_models()}
+_DEFAULT_MODEL = _MODEL_CHOICES[0][1] if _MODEL_CHOICES else None
 
 # ============================================================================
 # 模型缓存 — 懒加载，避免重复加载相同模型
@@ -47,7 +54,7 @@ def predict(image, model_name: str):
 
     Args:
         image: PIL Image，来自 gr.Image(type="pil")
-        model_name: "seresnet18" | "seresnet34"
+        model_name: 模型名，由 service 工厂提供
     """
     if image is None:
         return _render_empty()
@@ -64,7 +71,7 @@ def predict(image, model_name: str):
         cat_conf = probs["cat"]
         dog_conf = probs["dog"]
 
-        model_display = "SE-ResNet18" if model_name == "seresnet18" else "SE-ResNet34"
+        model_display = _MODEL_LABEL_MAP.get(model_name, model_name)
 
         return _render_result(label, cat_conf, dog_conf, elapsed_ms, model_display)
 
@@ -401,7 +408,7 @@ def build_ui():
         gr.HTML("""
         <div class="app-header">
           <h1>🐱 Cat vs Dog &middot; AI 图像分类器 🐶</h1>
-          <p>基于 SE-ResNet 深度学习模型 &middot; 支持 SEResNet18 / SEResNet34 切换</p>
+          <p>基于深度学习模型 &middot; 支持多种模型切换</p>
         </div>
         """)
 
@@ -419,11 +426,8 @@ def build_ui():
                 )
 
                 model_selector = gr.Dropdown(
-                    choices=[
-                        ("SE-ResNet18 — 轻量快速", "seresnet18"),
-                        ("SE-ResNet34 — 更高精度", "seresnet34"),
-                    ],
-                    value="seresnet18",
+                    choices=_MODEL_CHOICES,
+                    value=_DEFAULT_MODEL,
                     label="🧠 模型选择",
                     info="切换后自动重新预测",
                     interactive=True,
@@ -436,7 +440,7 @@ def build_ui():
         # ---- 底部 ----
         gr.HTML("""
         <div class="footer-note">
-          SE-ResNet 从头训练于 Kaggle Dogs vs. Cats 数据集 · 推理设备自动选择 GPU / CPU
+          猫狗分类模型训练于 Kaggle Dogs vs. Cats 数据集 · 推理设备自动选择 GPU / CPU
         </div>
         """)
 
