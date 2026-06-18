@@ -4,6 +4,64 @@
 
 ---
 
+## 0. 重大失误
+
+### 训练时的验证集不可复现，导致 training log 与 evaluate 指标不一致
+
+**现象**
+
+| 模型 | 训练日志 best_acc | evaluate_scratch.py | 差异 |
+|------|:-----------------:|:-------------------:|:----:|
+| SE-ResNet18 | — | 0.9748 | — |
+| SE-ResNet34 | 98.84% | 0.9856 | +0.72% |
+| SE-ResNet34-Big | 99.00% | 0.9980 | +0.80% |
+
+训练脚本记录的 `best_acc`（EMA 验证精度）与 `evaluate_scratch.py` 在 `checkpoints/scratch/best_model.pth` 上跑出的指标**系统性地不一致**。
+
+**根因**
+
+所有模型共用同一套数据加载管线 [`utils/dataset.py`](../utils/dataset.py)。数据划分逻辑如下：
+
+1. `CatDogDataset._scan_directory()` 用 `Path.iterdir()` 遍历 `data/train/` 目录，得到文件列表 `full_dataset.samples`。
+2. `get_dataloaders()` 用 `torch.randperm(total, generator=fix_seed())` 对 `full_dataset.samples` 做随机打乱，前 90% 为训练集，后 10% 为验证集。
+
+问题出在第 1 步：**`Path.iterdir()` 的返回顺序由操作系统文件系统决定，不保证跨运行一致**。虽然第 2 步用了固定 seed 的 `torch.Generator`，但只要 `iterdir()` 返回的文件列表顺序不同，`randperm` 打乱后分到的 train/val 集合就完全不同。
+
+于是：
+- 训练运行时文件系统返回一套顺序 → 划分出验证集 A → 模型在 A 上跑出 99.0%，存入 `best_model.pth`
+- 评估运行时文件系统返回另一套顺序 → 划分出验证集 B → 同一份权重在 B 上跑出 99.8%
+
+两份验证集的大小都是 2,500 张，但样本构成不同。模型在其中一套上更容易分类，导致 0.7~0.8% 的精度差异。
+
+**为什么不每次都触发？**
+
+同一个运行进程中多次调用 `get_dataloaders` 时，`iterdir()` 顺序通常是稳定的（文件系统缓存未失效），所以训练时逐 epoch 的验证集是一致的，evaluate 脚本和 debug 脚本在同一个 Python 进程内调用时也是一致的。**一旦在不同时间、不同进程中运行，文件系统返回的顺序就可能变化**，从而产生不可复现的划分。
+
+**修复方案**
+
+在 `CatDogDataset._scan_directory()` 中对文件路径排序（此处 `max_samples=None` 时文件是全量加载，排序不影响性能）：
+
+```python
+# 修改前
+file_iter = self.root_dir.iterdir()
+
+# 修改后
+file_iter = sorted(self.root_dir.iterdir(), key=lambda p: p.name)
+```
+
+同时，在训练脚本和评估脚本中固定 Python 内置 `random` 种子（`dataset.py` 的 `max_samples` 分支使用了 `random.shuffle`）：
+
+```python
+import random
+random.seed(RANDOM_SEED)
+```
+
+**影响范围**
+
+此问题影响所有使用 `get_dataloaders()` 的模型评估（SE-ResNet 系列 + SimpleCNN）。日志中记录的 `best_acc` 与最终 `evaluate_*.py` 报告的指标**不可直接对比**。可使用训练时的best_acc 和 kaggle 评分作为模型性能的参考。
+
+---
+
 ## 1. SE-ResNet18 (From Scratch)
 
 | 项目 | 值 |
