@@ -16,10 +16,9 @@ __pycache__/
 # 数据与模型（大文件，不进 Git）
 data/
 checkpoints/
-logs/
+# logs/
 *.pth
-!weights/SEResNet18_fp16.pth
-!weights/SEResNet34_fp16.pth
+!weights/*_fp16.pth
 *.pt
 *.onnx
 *.trt

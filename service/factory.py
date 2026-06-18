@@ -24,10 +24,12 @@ logger = logging.getLogger(__name__)
 PROJECT_ROOT = Path(__file__).parent.parent.resolve()
 DEFAULT_CONFIG = Path(__file__).parent / "config.yaml"
 
-# 模型名到 Service 类的延迟导入映射
+# 模型名到 Service 类的延迟导入映射，三元组 (模块路径, 类名, 前端展示标签)
 _SERVICE_CLASSES = {
-    "seresnet18": ("service.seresnet18", "SEResNet18Service"),
-    "seresnet34": ("service.seresnet34", "SEResNet34Service"),
+    "seresnet18": ("service.seresnet18", "SEResNet18Service", "SE-ResNet18 — 轻量快速"),
+    "seresnet34": ("service.seresnet34", "SEResNet34Service", "SE-ResNet34 — 更高精度"),
+    "seresnet34-big": ("service.seresnet34_big", "SEResNet34BigService", "SE-ResNet34-Big — 大模型"),
+    "cnn": ("service.cnn", "CNNService", "CNN — 基线模型"),
 }
 
 
@@ -94,7 +96,7 @@ def get_model_service(
             f"已注册: {list(_SERVICE_CLASSES.keys())}"
         )
 
-    module_path, class_name = _SERVICE_CLASSES[model_name]
+    module_path, class_name, _ = _SERVICE_CLASSES[model_name]
     import importlib
     module = importlib.import_module(module_path)
     service_cls = getattr(module, class_name)
@@ -110,3 +112,23 @@ def get_model_service(
         f"device={device or 'auto'}, max_batch_size={max_batch_size}"
     )
     return svc
+
+
+def get_available_models(
+    config_path: Optional[Union[str, Path]] = None,
+) -> list[dict[str, str]]:
+    """
+    返回当前配置中可用的模型列表（含前端展示标签）。
+
+    Returns:
+        形如 [{"name": "seresnet18", "label": "SE-ResNet18 — 轻量快速"}, ...] 的列表，
+        仅包含在配置文件中声明且已注册 Service 类的模型，顺序与注册顺序一致。
+    """
+    cfg = _load_config(config_path)
+    configured_models = cfg.get("models", {})
+
+    return [
+        {"name": name, "label": label}
+        for name, (_, _, label) in _SERVICE_CLASSES.items()
+        if name in configured_models
+    ]

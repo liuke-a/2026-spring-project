@@ -9,3 +9,7 @@ models:
     weights: "weights/SEResNet18_fp16.pth"
   seresnet34:
     weights: "weights/SEResNet34_fp16.pth"
+  seresnet34-big:
+    weights: "weights/SEResNet34_big_fp16.pth"
+  cnn:
+    weights: "weights/cnn_fp16.pth"

@@ -24,13 +24,18 @@ Quick start:
 from service.base import BaseModelService, CAT_LABEL, DOG_LABEL, LABEL_MAP
 from service.seresnet18 import SEResNet18Service
 from service.seresnet34 import SEResNet34Service
-from service.factory import get_model_service
+from service.seresnet34_big import SEResNet34BigService
+from service.cnn import CNNService
+from service.factory import get_model_service, get_available_models
 
 __all__ = [
     "BaseModelService",
     "SEResNet18Service",
     "SEResNet34Service",
+    "SEResNet34BigService",
+    "CNNService",
     "get_model_service",
+    "get_available_models",
     "CAT_LABEL",
     "DOG_LABEL",
     "LABEL_MAP",
