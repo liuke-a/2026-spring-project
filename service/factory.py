@@ -28,8 +28,8 @@ DEFAULT_CONFIG = Path(__file__).parent / "config.yaml"
 _SERVICE_CLASSES = {
     "seresnet18": ("service.seresnet18", "SEResNet18Service", "SE-ResNet18 — 轻量快速"),
     "seresnet34": ("service.seresnet34", "SEResNet34Service", "SE-ResNet34 — 更高精度"),
-    "seresnet34-big": ("service.seresnet34_big", "SEResNet34BigService", "SE-ResNet34-Big — 大模型"),
-    "cnn": ("service.cnn", "CNNService", "CNN — 基线模型"),
+    "seresnet34-big": ("service.seresnet34_big", "SEResNet34BigService", "SE-ResNet34-Big — 更多参数"),
+    "cnn": ("service.cnn", "CNNService", "CNN — 基线模型 轻量快速"),
 }
 
 

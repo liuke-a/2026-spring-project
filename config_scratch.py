@@ -1,7 +1,9 @@
 """
 从头训练（SE-ResNet）专用配置 — RTX 3080Ti 12GB 优化版。
 
-包含所有基础路径、图像预处理参数与从头训练专用超参数。
+复用 config.py 的路径、图像尺寸与归一化常量，仅定义从头训练所需的
+超参数与独立的 checkpoint / TensorBoard 子目录，避免与预训练迁移学习
+流程互相覆盖。
 
 关键优化（3080Ti 12GB vs 原 6GB 配置）：
 - BATCH_SIZE 64→256，充分利用大显存与 GPU 并行度
@@ -10,56 +12,42 @@
 - 增强数据增强强度（RandAugment + Mixup）
 """
 
-from pathlib import Path
-
-import torch
-
-# ==================== 基础路径 ====================
-PROJECT_ROOT = Path(__file__).parent.resolve()
-DATA_DIR = PROJECT_ROOT / "data"
-TRAIN_DIR = DATA_DIR / "train"
-TEST_DIR = DATA_DIR / "test"
-LOG_DIR = PROJECT_ROOT / "logs"
-LOG_FORMAT: str = "[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s"
-LOG_DATE_FORMAT: str = "%Y-%m-%d %H:%M:%S"
-LOG_FILE = LOG_DIR / "train.log"
-
-for _d in (LOG_DIR,):
-    _d.mkdir(parents=True, exist_ok=True)
-
-# ==================== 图像预处理 ====================
-IMAGE_SIZE: int = 224
-IMAGENET_MEAN: tuple = (0.485, 0.456, 0.406)
-IMAGENET_STD: tuple = (0.229, 0.224, 0.225)
-
-# ==================== 数据集 ====================
-VAL_RATIO: float = 0.1
-RANDOM_SEED: int = 42
-MAX_SAMPLES: int | None = None
-
-# ==================== 设备 ====================
-DEVICE: str = "cuda" if torch.cuda.is_available() else "cpu"
+from config import (  # noqa: F401  复用基础常量
+    PROJECT_ROOT,
+    DATA_DIR,
+    TRAIN_DIR,
+    TEST_DIR,
+    LOG_DIR,
+    IMAGE_SIZE,
+    IMAGENET_MEAN,
+    IMAGENET_STD,
+    VAL_RATIO,
+    RANDOM_SEED,
+    MAX_SAMPLES,
+    DEVICE,
+)
 
 # ==================== 模型结构 ====================
 # (2,2,2,2)=SE-ResNet18，(3,4,6,3)=SE-ResNet34
 # MODEL_LAYERS: tuple = (2, 2, 2, 2)  # 18 层
 MODEL_LAYERS: tuple = (3, 4, 6, 3)  # 34 层
-MODEL_WIDTH: int = 64
+MODEL_WIDTH: int = 96
 DROP_RATE: float = 0.2          # 分类头前 Dropout
 DROP_PATH: float = 0.05         # 随机深度最大概率（沿深度线性递增）
 
 # ==================== 数据加载 ====================
+# 覆盖 config.py 的默认值（仅 scratch 训练生效，不影响迁移学习）
 NUM_WORKERS: int = 8             # 3080Ti 12GB：8 worker 保证数据供给，无瓶颈
 
 # ==================== 训练超参数（针对 RTX 3080Ti 12GB 优化） ====================
-BATCH_SIZE: int = 256            # 12GB 显存充裕，大 batch 充分利用 GPU
-NUM_EPOCHS: int = 200             # 补偿大 batch 导致的每 epoch 步数减少
-WARMUP_EPOCHS: int = 5           # 大 batch 下 warmup 阶段可缩短
+BATCH_SIZE: int = 128            # 适度 batch size，兼顾泛化与效率
+NUM_EPOCHS: int = 200             # 足够训练收敛
+WARMUP_EPOCHS: int = 5           # warmup 阶段
 EARLY_STOP_PATIENCE: int = 50    # 基于 EMA 验证精度的早停耐心
 
 # 优化器：SGD + momentum + nesterov（从头训练 CNN 配合 cosine 终精度通常优于 Adam）
-# 学习率按线性缩放：BASE_LR = 0.05 × (256 / 64) = 0.2
-BASE_LR: float = 0.2             # 对应 BATCH_SIZE=256 的基准学习率（线性缩放）
+# 学习率按线性缩放：BASE_LR = 0.05 × (128 / 64) = 0.1
+BASE_LR: float = 0.1             # 对应 BATCH_SIZE=128 的基准学习率（线性缩放）
 MIN_LR: float = 1e-5             # cosine 退火最小学习率
 MOMENTUM: float = 0.9
 NESTEROV: bool = True
@@ -74,7 +62,7 @@ RAND_AUGMENT_M: int = 9             # RandAugment 强度（更强正则，提升
 # Mixup / CutMix（训练循环内按 batch 随机切换其一，或不增强）
 MIXUP_ALPHA: float = 0.2
 CUTMIX_ALPHA: float = 1.0
-MIXUP_PROB: float = 0.5             # 3080Ti 训练快，开启 mixup 增强泛化
+MIXUP_PROB: float = 0.2             # 3080Ti 训练快，开启 mixup 增强泛化
 MIXUP_SWITCH_PROB: float = 0.5      # 触发后选 cutmix 的概率（否则 mixup）
 
 # ==================== EMA ====================
