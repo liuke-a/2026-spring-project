@@ -18,10 +18,17 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 import torchvision.transforms as T
 
-from config_scratch import (
-    TRAIN_DIR, IMAGE_SIZE, IMAGENET_MEAN, IMAGENET_STD,
-    BATCH_SIZE, NUM_WORKERS, VAL_RATIO, RANDOM_SEED, MAX_SAMPLES
-)
+# 内置默认值，不再依赖 config_scratch.py
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+TRAIN_DIR = _PROJECT_ROOT / "data" / "train"
+IMAGE_SIZE: int = 224
+IMAGENET_MEAN: tuple = (0.485, 0.456, 0.406)
+IMAGENET_STD: tuple = (0.229, 0.224, 0.225)
+BATCH_SIZE: int = 256
+NUM_WORKERS: int = 8
+VAL_RATIO: float = 0.1
+RANDOM_SEED: int = 42
+MAX_SAMPLES: int | None = None
 
 logger = logging.getLogger(__name__)
 
@@ -69,6 +76,7 @@ class CatDogDataset(Dataset):
         if max_samples is None:
             file_iter = self.root_dir.iterdir()
         else:
+            # HACK:  遍历的顺序是不确定的，可能导致训练时的验证集和评估时的验证集不一致
             file_iter = list(self.root_dir.iterdir())
             random.shuffle(file_iter)
 
@@ -266,10 +274,9 @@ def get_dataloaders(
 
 if __name__ == "__main__":
     # 独立测试：验证数据 pipeline 能否正常吐出 batch
-    logging.basicConfig(
-        level=logging.INFO,
-        format="[%(asctime)s] [%(levelname)s] %(message)s"
-    )
+    from utils.logger import setup_logger
+
+    setup_logger("dataset_test")
 
     train_loader, val_loader = get_dataloaders()
     images, labels = next(iter(train_loader))

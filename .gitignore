@@ -12,11 +12,13 @@ __pycache__/
 *.swp
 .cursor/
 .trae
+.agents/
+skills-lock.json
 
 # 数据与模型（大文件，不进 Git）
 data/
 checkpoints/
-# logs/
+logs/
 *.pth
 !weights/*_fp16.pth
 *.pt
@@ -24,8 +26,19 @@ checkpoints/
 *.trt
 *.engine
 *.plan
+screenshots/
 
-# 输出文件
+# 临时脚本与文件
+scripts/
+!scripts/compress_weights.py
+!scripts/find_errors.py
+docs/
+!docs/PROJECT_PLAN.md
+!docs/model_benchmarks.md
+!docs/EDA_PEPORT.md
+errors.txt
+
+## 输出文件
 submission.csv
 *.csv
 

@@ -1,7 +1,7 @@
 """
-从头训练模型（SE-ResNet）的评估脚本。
+从头训练模型（SE-ResNet）系列模型的评估脚本。
 
-评估 SEResNet18 和 SEResNet34 需要调整 config_scratch.py 中的 MODEL_LAYERS 参数。
+评估时需要调整 config_scratch.py 中的 MODEL_LAYERS、MODEL_WIDTH 参数。
 在验证集上计算 Accuracy / Precision / Recall / F1 并绘制混淆矩阵。
 默认加载 checkpoints/scratch/best_model.pth 中的 EMA 权重。
 """

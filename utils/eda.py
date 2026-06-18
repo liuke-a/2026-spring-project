@@ -4,7 +4,6 @@
 """
 
 import os
-import logging
 from pathlib import Path
 from collections import Counter
 from typing import Dict, List, Tuple
@@ -13,16 +12,9 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import numpy as np
 
-# 日志配置
-logging.basicConfig(
-    level=logging.INFO,
-    format='[%(asctime)s] [%(levelname)s] %(message)s',
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler('logs/eda_report.log', mode='w')
-    ]
-)
-logger = logging.getLogger(__name__)
+from utils.logger import setup_logger
+
+logger = setup_logger("eda")
 
 
 def analyze_dataset(data_dir: str) -> Dict:
