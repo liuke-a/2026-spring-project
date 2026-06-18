@@ -65,6 +65,33 @@
 - **硬件加速**: NVIDIA CUDA 13（推荐 RTX 3080Ti 12GB）
 - **关键依赖库**: `tensorboard`, `tqdm`, `scikit-learn`, `matplotlib`, `seaborn`, `pandas`
 
+**克隆仓库**:
+```bash
+# 普通克隆（会下载完整的模型权重 fp16 文件，> 100 MB）
+git clone https://github.com/liuke-a/2026-spring-project.git
+
+# 跳过 LFS 模型权重下载（仅获取指针文件，~130 bytes/个）
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/liuke-a/2026-spring-project.git
+```
+
+**git pull 时跳过模型权重**:
+```bash
+GIT_LFS_SKIP_SMUDGE=1 git pull
+```
+
+之后需要权重时
+```bash
+git lfs pull
+```
+
+或只拉特定文件：
+```bash
+git lfs pull --include="weights/SEResNet18_fp16.pth"
+```
+
+
+> 💡 模型权重（`weights/*_fp16.pth`）已托管在 Git LFS 上。使用 `GIT_LFS_SKIP_SMUDGE=1` 可以跳过权重下载，大幅加快克隆速度。如需后续拉取权重，执行 `git lfs pull`。
+
 **一键安装依赖**:
 ```bash
 pip install -r requirements.txt
