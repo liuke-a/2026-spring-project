@@ -100,7 +100,7 @@ def evaluate():
     )
     plt.xlabel("Predicted")
     plt.ylabel("Actual")
-    plt.title("Confusion Matrix (SE-ResNet scratch)")
+    plt.title("Confusion Matrix (SEResNet18)")
     plt.tight_layout()
 
     out_dir = PROJECT_ROOT / "logs"
