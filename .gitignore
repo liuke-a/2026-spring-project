@@ -36,6 +36,8 @@ docs/
 !docs/PROJECT_PLAN.md
 !docs/model_benchmarks.md
 !docs/EDA_PEPORT.md
+!docs/figures/
+!docs/figures/*
 errors.txt
 
 ## 输出文件
